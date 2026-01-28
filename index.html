@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Dura</title>
+  <link rel="icon" href="Apex-icons/Logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<header class="w-full relative">
+
+  <!-- Carousel -->
+  <div id="carousel" class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden">
+
+    <div id="slides" class="flex transition-transform duration-700 ease-in-out">
+
+  <video
+    src="Apex-videos/v-1.mp4"
+    class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover flex-shrink-0"
+    autoplay
+    muted
+    loop
+    playsinline>
+  </video>
+
+  <video
+    src="Apex-videos/v-2.mp4"
+    class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover flex-shrink-0"
+    autoplay
+    muted
+    loop
+    playsinline>
+  </video>
+
+  <video
+    src="Apex-videos/v-1.mp4"
+    class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover flex-shrink-0"
+    autoplay
+    muted
+    loop
+    playsinline>
+  </video>
+
+  <video
+    src="Apex-videos/v-2.mp4"
+    class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover flex-shrink-0"
+    autoplay
+    muted
+    loop
+    playsinline>
+  </video>
+
+</div>
+
+
+  </div>
+
+  <!-- Header Content Overlay -->
+  <div class="absolute top-0 left-0 w-full z-20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 md:py-6">
+
+      <!-- Logo -->
+      <img src="Apex-icons/Logo.png" alt="Apex Dura Logo" class="h-10 sm:h-12 md:h-13 w-auto" />
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8 text-white text-base lg:text-lg">
+
+        <a href="#" class="bg-white text-red-600 px-4 py-1.5 rounded-full font-bold shadow">
+          Home
+        </a>
+
+        <a href="#" class="hover:text-gray-300 transition font-thin">Products</a>
+        <a href="#" class="hover:text-gray-300 transition font-thin">Infrastructure</a>
+        <a href="#" class="hover:text-gray-300 transition font-thin">Investor Corner</a>
+        <a href="#" class="hover:text-gray-300 transition font-thin">Estimator</a>
+        <a href="#" class="hover:text-gray-300 transition font-thin">Contact Us</a>
+
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="lg:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-black/30 backdrop-blur-sm text-white px-6 py-6 space-y-4">
+
+      <a href="#" class="block bg-white text-red-600 px-4 py-1.5 rounded-full font-bold shadow">Home</a>
+      <a href="#" class="block">Products</a>
+      <a href="#" class="block">Infrastructure</a>
+      <a href="#" class="block">Investor Corner</a>
+      <a href="#" class="block">Estimator</a>
+      <a href="#" class="block">Contact Us</a>
+
+    </div>
+  </div>
+
+</header>
+
+<main>
+
+<!-- ================= RED BAR ================= -->
+
+<section class="w-full flex flex-col sm:flex-row">
+
+  <!-- Left Content -->
+  <div class="flex-1 bg-red-600">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center h-auto sm:h-[85px] px-4 py-4 sm:py-0">
+
+      <h2 class="text-white text-3xl sm:text-3xl md:text-4xl font-bold mr-0 sm:mr-6 mb-2 sm:mb-0 whitespace-nowrap">
+  Hello !
+</h2>
+
+
+      <div class="hidden sm:block h-8 w-px bg-white opacity-80 mr-6"></div>
+
+      <p class="text-white text-xs sm:text-sm font-light leading-relaxed max-w-xl">
+        Delivering strength, quality, and trust through world-class TMT steel solutions
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Right Controls -->
+  <div  class="w-full sm:w-[130px] bg-white flex items-center justify-center space-x-6 py-3 sm:py-0">
+
+    <button id="prevBtn"
+      class="text-red-600 text-2xl font-bold px-4 py-2 hover:scale-110 transition cursor-pointer">
+      &#10094;
+    </button>
+
+    <button id="nextBtn"
+      class="text-red-600 text-2xl font-bold px-4 py-2 hover:scale-110 transition cursor-pointer">
+      &#10095;
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FEATURE CARDS ================= -->
+
+<section class="w-full">
+  <div class="feature-wrapper grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_130px]">
+
+    <!-- CARD 1 -->
+    <div class="feature-card shrink-0 w-full group relative overflow-hidden border-b sm:border-r-2 border-red-500 cursor-pointer" data-slide="0">
+      <div class="card-bg absolute inset-0 bg-[url('Apex-Images/1.png')] bg-cover bg-center opacity-0 transition-opacity duration-300"></div>
+      <div class="card-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div>
+
+      <div class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white">
+        <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">Structural Strength</h3>
+        <p class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200">
+          High-quality TMT bars engineered for superior durability and safety.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="feature-card shrink-0 w-full group relative overflow-hidden border-b sm:border-r-2 border-red-500 cursor-pointer" data-slide="1">
+      <div class="card-bg absolute inset-0 bg-[url('Apex-Images/1.png')] bg-cover bg-center opacity-0 transition-opacity duration-300"></div>
+      <div class="card-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div>
+
+      <div class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white">
+        <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">Trusted Steel</h3>
+        <p class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200">
+          Manufactured to meet modern construction standards.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="feature-card shrink-0 w-full group relative overflow-hidden border-b sm:border-r-2 border-red-500 cursor-pointer" data-slide="2">
+      <div class="card-bg absolute inset-0 bg-[url('Apex-Images/1.png')] bg-cover bg-center opacity-0 transition-opacity duration-300"></div>
+      <div class="card-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div>
+
+      <div class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white">
+        <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">Built Strong</h3>
+        <p class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200">
+          Reliable reinforcement solutions for long-lasting structures.
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="feature-card shrink-0 w-full group relative overflow-hidden border-b sm:border-r-2 border-red-500 cursor-pointer" data-slide="3">
+      <div class="card-bg absolute inset-0 bg-[url('Apex-Images/1.png')] bg-cover bg-center opacity-0 transition-opacity duration-300"></div>
+      <div class="card-overlay absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300"></div>
+
+      <div class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white">
+        <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">Engineered Excellence</h3>
+        <p class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200">
+          Precision-crafted steel for demanding construction needs.
+        </p>
+      </div>
+    </div>
+
+    <!-- ICON PANEL -->
+    <div id="iconPanel" class="shrink-0 w-full bg-red-600 flex items-center justify-center relative min-h-[120px] sm:min-h-[140px]">
+      <img src="Apex-icons/shield-01.png" class="icon absolute opacity-100 scale-110 transition-all duration-300 w-7 sm:w-8">
+      <img src="Apex-icons/chevron-right.png" class="icon absolute opacity-0 scale-75 transition-all duration-300 w-7 sm:w-8">
+      <img src="Apex-icons/shield-01.png" class="icon absolute opacity-0 scale-75 transition-all duration-300 w-7 sm:w-8">
+      <img src="Apex-icons/shield-01.png" class="icon absolute opacity-0 scale-75 transition-all duration-300 w-7 sm:w-8">
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Hero-paragraph section  -->
+<section class="w-full py-12 md:py-20 bg-gray-900/9">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 leading-tight mb-6">
+          Where Advanced Technology Meets India's Construction Revolution Today
+        </h1>
+
+        <p class="text-gray-600 text-sm sm:text-base lg:text-lg max-w-xl mb-6">
+          Every Apex bar combines anti-corrosion protection, earthquake resistance,
+          and superior grip. Built with innovation, priced for value, delivered with reliability.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-thin">Strength</span>
+          <span class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-thin">Innovation</span>
+          <span class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-thin">Durability</span>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="flex justify-center">
+
+<svg
+  viewBox="0 0 470 580"
+  width="320"
+  height="420"
+  preserveAspectRatio="xMidYMid meet"
+>
+
+  <defs>
+    <clipPath id="apexClip">
+
+      <path d="M205.807 109.249L444.736 285.06L438.7 212.98L235.02 0L29.5134 218.698L24.2896 280.696L205.807 109.249Z"/>
+
+      <path d="M453.221 385.398L447.997 323.6L192.331 161.834L20.907 321.393L15.6324 383.893L160.887 267.622L453.221 385.398Z"/>
+
+      <path d="M461.222 480.416L456.556 424.889L147.383 323.666L12.5262 420.324L7.30237 482.573L117.714 429.303L461.222 480.416Z"/>
+
+      <path d="M468.881 571.256L464.621 520.494L97.0729 481.721L4.20953 519.341L0 569.1V572.41H469.997V562.83L468.881 571.256Z"/>
+
+    </clipPath>
+  </defs>
+
+  <foreignObject width="100%" height="100%" clip-path="url(#apexClip)">
+    <video
+      src="Apex-videos/v-2.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      style="width:100%; height:100%; object-fit:cover;">
+    </video>
+  </foreignObject>
+
+</svg>
+
+</div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Products section -->
+  <section class="w-full py-6 ">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-red-600 mb-3">Products</h2>
+
+    <p class="text-gray-500 max-w-2xl">
+      High-performance steel solutions engineered for strength, durability, and reliability.
+    </p>
+
+  </div>
+</section>
+
+
+
+
+<!-- Cards section -->
+
+
+<div class="apx-carousel-wrapper relative max-w-7xl mx-auto mt-4">
+
+  <!-- Prev Button -->
+  <button id="apxPrevBtn"
+class="apx-carousel-btn absolute left-[-10px] top-1/2 -translate-y-1/2 z-20  w-10 h-10  flex items-center justify-center cursor-pointer ">
+    <img src="Apex-icons/Prev-Arrow.png" class="w-5 h-5" alt="Prev-Arrow">
+  </button>
+
+  <!-- Next Button -->
+  <button id="apxNextBtn"
+  class="apx-carousel-btn absolute right-[-5px] top-1/2 -translate-y-1/2 z-20  text-white w-10 h-10  flex items-center justify-center cursor-pointer ">
+
+  <img src="Apex-icons/next-Arrow.png" class="w-5 h-5" alt="Next">
+
+</button>
+
+
+  <!-- Viewport -->
+  <div class="apx-carousel-viewport overflow-hidden">
+
+    <!-- Track -->
+    <div id="apxCarouselTrack" class="apx-carousel-track flex transition-transform duration-500 ease-in-out">
+
+      <!-- Slide -->
+      <div class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2 ">
+        <div class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6">
+
+          <div class="mb-3">
+            <img src="Apex-icons/Logo.png" class="h-7" />
+          </div>
+
+          <div class="relative rounded-xl overflow-hidden h-80">
+            <img src="Apex-Images/card-bg-1.png"
+              class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 p-6 flex flex-col justify-center text-white">
+
+              <img src="Apex-icons/Construction-Bars-icon.png" class="h-8 w-8 mb-3">
+
+              <h3 class="text-lg font-semibold mb-2">Construction Bars</h3>
+
+              <p class="text-[11px] mb-5 max-w-[85%]">
+                Designed to withstand seismic <br> forces  while ensuring <br> long-term durability.
+              </p>
+
+              <a href="#"><button
+                class="bg-white text-red-600 text-sm font-medium px-4 py-2 rounded-md w-fit cursor-pointer hover:bg-gray-200">
+                Learn More →
+              </button>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="pt-4 text-center">
+            <p class="text-red-600 font-medium text-sm">
+              Built Strong for Lasting Structural Performance
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- slide 2-->
+       <div class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2">
+        <div class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6">
+
+          <div class="mb-3">
+            <img src="Apex-icons/Logo.png" class="h-7" />
+          </div>
+
+          <div class="relative rounded-xl overflow-hidden h-80">
+            <img src="Apex-Images/card-bg-2.png"
+              class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 p-6 flex flex-col justify-center text-white">
+
+              <img src="Apex-icons/Billets-1.png" class="h-8 w-8 mb-3">
+
+              <h3 class="text-lg font-semibold mb-2">Billets</h3>
+
+              <p class="text-[11px] mb-5 max-w-[85%]">
+                Mild and Carbon Steel, <br> Low Alloy Steel in sizes 100×100,<br> 10×10, and 160×160 sq. mm.
+              </p>
+
+              <a href="#"><button
+                class="bg-white text-red-600 text-sm font-medium px-4 py-2 rounded-md w-fit cursor-pointer hover:bg-gray-200">
+                Learn More →
+              </button>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="pt-4 text-center">
+            <p class="text-red-600 font-medium text-sm">
+              Precision Steel for Reliable Structural Foundations
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- slide 3 -->
+
+      <div class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2">
+        <div class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6">
+
+          <div class="mb-3">
+            <img src="Apex-icons/Logo.png" class="h-7" />
+          </div>
+
+          <div class="relative rounded-xl overflow-hidden h-80">
+            <img src="Apex-Images/card-bg-3.png"
+              class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 p-6 flex flex-col justify-center text-white">
+
+              <img src="Apex-icons/Round-Bars.png" class="h-8 w-8 mb-3">
+
+              <h3 class="text-lg font-semibold mb-2">Round Bars</h3>
+
+              <p class="text-[11px] mb-7 max-w-[85%]">
+                Engineered for superior strength, <br> durability, and seismic safety.
+              </p>
+
+
+              <a href="#"><button
+                class="bg-white text-red-600 text-sm font-medium px-4 py-2 rounded-md w-fit cursor-pointer hover:bg-gray-200">
+                Learn More →
+              </button>
+            </a>
+
+              
+
+            </div>
+          </div>
+
+          <div class="pt-4 text-center">
+            <p class="text-red-600 font-medium text-sm">
+              Engineered Strength for Industrial Demands
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2">
+        <div class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6">
+
+          <div class="mb-3">
+            <img src="Apex-icons/Logo.png" class="h-7" />
+          </div>
+
+          <div class="relative rounded-xl overflow-hidden h-80">
+            <img src="Apex-Images/card-bg-1.png"
+              class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 p-6 flex flex-col justify-center text-white">
+
+              <img src="Apex-icons/Construction-Bars-icon.png" class="h-8 w-8 mb-3">
+
+              <h3 class="text-lg font-semibold mb-2">Construction Bars</h3>
+
+              <p class="text-[11px] mb-5 max-w-[85%]">
+                Designed to withstand seismic <br> forces while ensuring long-term <br> durability.
+              </p>
+
+              <a href="#"><button
+                class="bg-white text-red-600 text-sm font-medium px-4 py-2 rounded-md w-fit cursor-pointer hover:bg-gray-200">
+                Learn More →
+              </button>
+            </a>
+
+            </div>
+          </div>
+
+          <div class="pt-4 text-center">
+            <p class="text-red-600 font-medium text-sm">
+              Built Strong for Lasting Structural Performance
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</main>
+
+
+<script>
+(function () {
+
+  const track = document.getElementById("apxCarouselTrack");
+  const prevBtn = document.getElementById("apxPrevBtn");
+  const nextBtn = document.getElementById("apxNextBtn");
+
+  if (!track || !prevBtn || !nextBtn) {
+    console.error("Carousel elements not found");
+    return;
+  }
+
+  let index = 0;
+  let slideWidth = 0;
+
+  function slidesPerView() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
+
+  function calculateWidth() {
+    const firstSlide = track.querySelector(".apx-carousel-slide");
+    slideWidth = firstSlide.offsetWidth;
+  }
+
+  function updateCarousel() {
+    const totalSlides = track.children.length;
+    const maxIndex = totalSlides - slidesPerView();
+
+    if (index < 0) index = maxIndex;
+    if (index > maxIndex) index = 0;
+
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  function initCarousel() {
+    calculateWidth();
+    updateCarousel();
+  }
+
+  nextBtn.onclick = () => {
+    index++;
+    updateCarousel();
+  };
+
+  prevBtn.onclick = () => {
+    index--;
+    updateCarousel();
+  };
+
+  window.addEventListener("resize", () => {
+    calculateWidth();
+    updateCarousel();
+  });
+
+  // Wait for images + layout
+  window.addEventListener("load", initCarousel);
+
+})();
+</script>
+
+
+
+<script src="Js/Home-slider.js"></script>
+<script src="Js/Mobile-navbar.js"></script>
+
+</body>
+</html>

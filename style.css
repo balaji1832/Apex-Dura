@@ -1,0 +1,83 @@
+h1,h2,h3,h4,h5,h6{
+    font-family: "chakra petch";
+}
+
+p,span,div,a,li{
+    font-family: "Inter";
+}
+
+.feature-card {
+  height: 160px;
+}
+
+/* Hover effect */
+.feature-card:hover .card-bg,
+.feature-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Active state */
+.feature-card.active .card-bg,
+.feature-card.active .card-overlay {
+  opacity: 1 !important;
+}
+
+.feature-card.active {
+  color: white;
+}
+
+.feature-card.active p {
+  color: #e5e7eb;
+}
+
+/* Mobile slider mode */
+@media (max-width: 639px) {
+  .feature-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .feature-wrapper > * {
+    scroll-snap-align: start;
+  }
+
+  .feature-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .feature-card {
+    height: auto;
+    min-height: 120px;
+  }
+}
+
+.apex-video-mask {
+  width: 320px;
+  height: 420px;
+  position: relative;
+
+  mask: url(#apexShapeMask);
+  -webkit-mask: url(#apexShapeMask);
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-size: contain;
+  -webkit-mask-size: contain;
+
+  mask-position: center;
+  -webkit-mask-position: center;
+
+  overflow: hidden;
+}
+
+.apex-video-mask video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
