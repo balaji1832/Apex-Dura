@@ -160,3 +160,83 @@ p,span,div,a,li{
     transform: scale(1.3) translateX(12px);
   }
 }
+
+
+
+
+.apex-logo {
+  transform: translateZ(0);
+}
+
+.apex-logo .fill-anim {
+  animation: logoFillVertical 8s linear infinite;
+  will-change: transform;
+}
+
+@keyframes logoFillVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(476px);
+  }
+}
+
+
+/* scroll section */
+
+.why-title {
+  
+  font-size: clamp(72px, 14vw, 180px);
+}
+
+.card { perspective: 1600px; }
+
+  .card-inner {
+    transform-style: preserve-3d;
+    will-change: transform, opacity, filter;
+    
+  }
+
+  .bg-parallax { will-change: transform; }
+
+  /* ===== MOBILE FIXES ===== */
+  @media (max-width: 768px) {
+
+    .card {
+      position: relative !important;
+      height: 100svh !important;
+    }
+
+    .card-inner {
+      width: 92% !important;
+      padding: 1.5rem !important;
+    }
+
+    
+  }
+
+  #whyChooseScroll .card {
+  perspective: 1600px;
+}
+
+#whyChooseScroll .card-inner {
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
+}
+
+#whyChooseScroll .bg-parallax {
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  #whyChooseScroll .card {
+    position: relative !important;
+    height: 100svh !important;
+  }
+
+  #whyChooseScroll .card-inner {
+    width: 92% !important;
+    padding: 1.5rem !important;
+  }
+}

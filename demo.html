@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Scroll Flip Cards</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<style>
+  
+  .card { perspective: 1600px; }
+
+  .card-inner {
+    transform-style: preserve-3d;
+    will-change: transform, opacity, filter;
+    
+  }
+
+  .bg-parallax { will-change: transform; }
+
+  /* ===== MOBILE FIXES ===== */
+  @media (max-width: 768px) {
+
+    .card {
+      position: relative !important;
+      height: 100svh !important;
+    }
+
+    .card-inner {
+      width: 92% !important;
+      padding: 1.5rem !important;
+    }
+
+    
+  }
+</style>
+</head>
+<body class="bg-white">
+
+
+
+</body>
+</html>
