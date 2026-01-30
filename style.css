@@ -6,6 +6,9 @@ p,span,div,a,li{
     font-family: "Inter";
 }
 
+body{
+  overflow-x: hidden;
+}
 .feature-card {
   height: 160px;
 }
@@ -83,41 +86,22 @@ p,span,div,a,li{
 
 /* Apex arrow logo animation */
 
-@keyframes arrowMovePlus {
-  from { transform: translate3d(-50%, 0, 0); }
-  to   { transform: translate3d(0%, 0, 0); }
+@keyframes arrowMoveLTR {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .arrow-strip {
   display: flex;
   width: max-content;
-  will-change: transform;
-  animation: arrowMovePlus 7s linear infinite;
+  animation: arrowMoveLTR 15s linear infinite;
 }
 
-/* MOBILE FIX – scoped */
-@media (max-width: 640px) {
 
-  .arrow-marquee::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 120px;
-    height: 100%;
-    background: white;
-    z-index: 9;
-    pointer-events: none;
-  }
-
-  .arrow-marquee > div:first-child {
-    z-index: 10;
-  }
-
-  .arrow-strip {
-    animation-duration: 7s;
-  }
-}
 
 
 
@@ -169,7 +153,7 @@ p,span,div,a,li{
 }
 
 .apex-logo .fill-anim {
-  animation: logoFillVertical 8s linear infinite;
+  animation: logoFillVertical 9s linear infinite;
   will-change: transform;
 }
 
@@ -178,12 +162,40 @@ p,span,div,a,li{
     transform: translateY(0);
   }
   100% {
-    transform: translateY(476px);
+    transform: translateY(391px);
   }
 }
 
 
 /* scroll section */
+
+
+.word-rotate {
+  height: 1.2em;
+  overflow: hidden;
+  color: white;
+  
+  padding: 10px 3rem;
+}
+
+.word-rotate span {
+  display: block;
+  animation: rotateWords 9s infinite;
+}
+
+@keyframes rotateWords {
+  0%   { transform: translateY(0); }
+  16%  { transform: translateY(-100%); }
+  32%  { transform: translateY(-200%); }
+  48%  { transform: translateY(-300%); }
+  64%  { transform: translateY(-400%); }
+  80%  { transform: translateY(-500%); }
+  90%  { transform: translateY(-500%); }
+  100% { transform: translateY(0); }
+}
+
+
+
 
 .why-title {
   
@@ -241,7 +253,7 @@ p,span,div,a,li{
   }
 }
 
-
+/* Reliable TMT Bars */
 
   /* BASE WHITE CHEVRONS */
 .white-chevrons {
