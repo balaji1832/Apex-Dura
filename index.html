@@ -20,15 +20,23 @@
     />
 
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   </head>
 
   <body>
+    <!-- Progress bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[9999]">
+      <div
+        id="progressBar"
+        class="h-full w-0 bg-gradient-to-r from-white to-red-500 transition-all duration-150"
+      ></div>
+    </div>
+
     <header class="w-full relative">
       <!-- Carousel -->
       <div
         id="carousel"
-        class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden"
+        class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden fade-up"
       >
         <div
           id="slides"
@@ -118,7 +126,7 @@
           <!-- Mobile Menu Button -->
           <button
             id="menuBtn"
-            class="lg:hidden text-white  text-3xl focus:outline-none"
+            class="lg:hidden text-white text-3xl focus:outline-none"
           >
             ☰
           </button>
@@ -144,12 +152,12 @@
       </div>
     </header>
 
-    <main >
+    <main>
       <!-- ================= RED BAR ================= -->
 
       <section class="w-full flex flex-col sm:flex-row">
         <!-- Left Content -->
-        <div class="flex-1 bg-red-600">
+        <div class="flex-1 bg-red-600 fade-left">
           <div
             class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center h-auto sm:h-[85px] px-4 py-4 sm:py-0"
           >
@@ -174,7 +182,7 @@
 
         <!-- Right Controls -->
         <div
-          class="w-full sm:w-[130px] bg-white flex items-center justify-center space-x-6 py-3 sm:py-0"
+          class="w-full sm:w-[130px] bg-white flex items-center justify-center space-x-6 py-3 sm:py-0 fade-up"
         >
           <button
             id="prevBtn"
@@ -194,7 +202,7 @@
 
       <!-- ================= FEATURE CARDS ================= -->
 
-      <section class="w-full">
+      <section class="w-full fade-down">
         <div
           class="feature-wrapper grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_130px]"
         >
@@ -213,11 +221,11 @@
             <div
               class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white"
             >
-              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">
+              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2 fade-left">
                 Structural Strength
               </h3>
               <p
-                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200"
+                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 fade-left"
               >
                 High-quality TMT bars engineered for superior durability and
                 safety.
@@ -240,11 +248,11 @@
             <div
               class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white"
             >
-              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">
+              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2 fade-left">
                 Trusted Steel
               </h3>
               <p
-                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200"
+                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 fade-left"
               >
                 Manufactured to meet modern construction standards.
               </p>
@@ -266,11 +274,11 @@
             <div
               class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white"
             >
-              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">
+              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2 fade-left">
                 Built Strong
               </h3>
               <p
-                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200"
+                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 fade-left"
               >
                 Reliable reinforcement solutions for long-lasting structures.
               </p>
@@ -292,11 +300,11 @@
             <div
               class="relative z-10 p-4 sm:p-6 transition-colors duration-300 group-hover:text-white"
             >
-              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2">
+              <h3 class="text-base sm:text-lg font-bold mb-1 sm:mb-2 fade-left">
                 Engineered Excellence
               </h3>
               <p
-                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200"
+                class="text-xs sm:text-sm text-gray-600 group-hover:text-gray-200 fade-left"
               >
                 Precision-crafted steel for demanding construction needs.
               </p>
@@ -329,20 +337,20 @@
       </section>
 
       <!-- Hero-paragraph section  -->
-      <section class="w-full py-12 md:py-20 ">
+      <section class="w-full py-12 md:py-20">
         <div class="max-w-7xl mx-auto px-2 sm:px-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <!-- LEFT CONTENT -->
             <div>
               <h1
-                class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 leading-tight mb-6"
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 leading-tight mb-6 fade-left"
               >
                 Where Advanced Technology Meets India's Construction Revolution
                 Today
               </h1>
 
               <p
-                class="text-gray-600 text-sm sm:text-base lg:text-lg max-w-xl mb-6"
+                class="text-gray-600 text-sm sm:text-base lg:text-lg max-w-xl mb-6 fade-left"
               >
                 Every Apex bar combines anti-corrosion protection, earthquake
                 resistance, and superior grip. Built with innovation, priced for
@@ -351,22 +359,22 @@
 
               <div class="flex flex-wrap gap-3">
                 <span
-                  class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-light"
+                  class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-light fade-left"
                   >Strength</span
                 >
                 <span
-                  class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-light"
+                  class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-light fade-left"
                   >Innovation</span
                 >
                 <span
-                  class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-light"
+                  class="bg-red-500 text-white text-xs sm:text-sm px-3 py-1 rounded-sm font-light fade-left"
                   >Durability</span
                 >
               </div>
             </div>
 
             <!-- RIGHT IMAGE -->
-            <div class="flex justify-center lg:ms-18">
+            <div class="flex justify-center lg:ms-18 fade-down">
               <svg
                 viewBox="0 0 470 580"
                 width="350"
@@ -416,9 +424,11 @@
       <!-- Products section -->
       <section class="w-full py-6">
         <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-3xl font-bold text-red-600 mb-3">Products</h2>
+          <h2 class="text-3xl font-bold text-red-600 mb-3 fade-left">
+            Products
+          </h2>
 
-          <p class="text-gray-500 max-w-2xl">
+          <p class="text-gray-500 max-w-2xl fade-right">
             High-performance steel solutions engineered for strength,
             durability, and reliability.
           </p>
@@ -431,7 +441,7 @@
           <!-- Prev Button -->
           <button
             id="apxPrevBtn"
-            class="apx-carousel-btn absolute left-[-10px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center cursor-pointer"
+            class="apx-carousel-btn absolute left-[-10px] lg:left-[-30px] top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center cursor-pointer"
           >
             <img
               src="Apex-icons/Prev-Arrow.png"
@@ -457,13 +467,13 @@
             >
               <!-- Slide -->
               <div
-                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2"
+                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2 fade-up "
               >
                 <div
-                  class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6"
+                  class="max-w-sm bg-white rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.18)] overflow-hidden p-6"
                 >
                   <div class="mb-3">
-                    <img src="Apex-icons/Logo.png" class="h-7" />
+                    <img src="Apex-icons/Logo-icon.png" class="h-7" />
                   </div>
 
                   <div class="relative rounded-xl overflow-hidden h-80">
@@ -517,13 +527,13 @@
 
               <!-- slide 2-->
               <div
-                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2"
+                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2 fade-down"
               >
                 <div
-                  class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6"
+                  class="max-w-sm bg-white rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.18)] overflow-hidden p-6"
                 >
                   <div class="mb-3">
-                    <img src="Apex-icons/Logo.png" class="h-7" />
+                    <img src="Apex-icons/Logo-icon.png" class="h-7" />
                   </div>
 
                   <div class="relative rounded-xl overflow-hidden h-80">
@@ -576,13 +586,13 @@
               <!-- slide 3 -->
 
               <div
-                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2"
+                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2 fade-left"
               >
                 <div
-                  class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6"
+                  class="max-w-sm bg-white rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.18)] overflow-hidden p-6"
                 >
                   <div class="mb-3">
-                    <img src="Apex-icons/Logo.png" class="h-7" />
+                    <img src="Apex-icons/Logo-icon.png" class="h-7" />
                   </div>
 
                   <div class="relative rounded-xl overflow-hidden h-80">
@@ -632,13 +642,13 @@
               </div>
 
               <div
-                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2"
+                class="apx-carousel-slide min-w-full md:min-w-[50%] lg:min-w-[33.3333%] p-2 fade-right"
               >
                 <div
-                  class="max-w-sm bg-white rounded-2xl shadow-md overflow-hidden p-6"
+                  class="max-w-sm bg-white rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.18)] overflow-hidden p-6"
                 >
                   <div class="mb-3">
-                    <img src="Apex-icons/Logo.png" class="h-7" />
+                    <img src="Apex-icons/Logo-icon.png" class="h-7" />
                   </div>
 
                   <div class="relative rounded-xl overflow-hidden h-80">
@@ -696,51 +706,42 @@
 
       <!-- Apex Dura Arrow animation section  -->
       <section
-  class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white py-6 overflow-hidden isolate my-7"
->
-  <div class="overflow-hidden w-screen">
-    <div id="arrowStrip" class="flex gap-4 arrow-strip">
-      <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
-      <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
-      <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
-      <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
-      <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
-    </div>
-  </div>
-</section>
-
-
+        class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-white py-6 overflow-hidden isolate my-7 fade-up"
+      >
+        <div class="overflow-hidden w-screen">
+          <div id="arrowStrip" class="flex gap-4 arrow-strip">
+            <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
+            <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
+            <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
+            <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
+            <img src="Apex-icons/next-Arrow.png" class="w-7 sm:w-9 md:w-10" />
+          </div>
+        </div>
+      </section>
 
       <!-- Banner-video section -->
 
-     <section
-  id="videoSection"
-  class="relative w-full overflow-hidden my-7
-         h-[220px] sm:h-[320px] md:h-[450px] lg:h-[520px] xl:h-[620px]">
+      <section
+        id="videoSection"
+        class="relative w-full overflow-hidden my-7 h-[220px] sm:h-[320px] md:h-[450px] lg:h-[520px] xl:h-[620px] fade-right"
+      >
+        <!-- Video -->
+        <video
+          src="Apex-videos/video-1.mp4"
+          class="w-full h-full object-cover"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
 
-  <!-- Video -->
-  <video
-    src="Apex-videos/video-1.mp4"
-    class="w-full h-full object-cover"
-    autoplay
-    muted
-    loop
-    playsinline>
-  </video>
-
-  <!-- Logo -->
-  <img
-    id="fadeLogo"
-    src="Apex-icons/Apex-large-logo.png"
-    class="absolute inset-0 m-auto
-           w-[160px] sm:w-[240px] md:w-[340px] lg:w-[670px]
-           opacity-0 pointer-events-none transition-opacity duration-700"
-  />
-
-</section>
-
-
-
+        <!-- Logo -->
+        <img
+          id="fadeLogo"
+          src="Apex-icons/Apex-large-logo.png"
+          class="absolute inset-0 m-auto w-[160px] sm:w-[240px] md:w-[340px] lg:w-[670px] opacity-0 pointer-events-none transition-opacity duration-700"
+        />
+      </section>
 
       <!-- Certified Strength with Superior Performance -->
 
@@ -750,7 +751,7 @@
           class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-12 items-start gap-y-6"
         >
           <!-- Left: 50% -->
-          <div class="col-span-12 md:col-span-6">
+          <div class="col-span-12 md:col-span-6 fade-down">
             <h2
               class="text-red-600 font-bold text-2xl sm:text-3xl md:text-[42px] leading-tight tracking-wide"
             >
@@ -762,7 +763,7 @@
 
           <!-- Right: 50% -->
           <div
-            class="col-span-12 md:col-span-6 flex justify-center md:justify-start lg:justify-center mt-4 md:mt-3"
+            class="col-span-12 md:col-span-6 flex justify-center md:justify-start lg:justify-center mt-4 md:mt-3 fade-left"
           >
             <div
               class="flex items-center gap-3 sm:gap-4 md:gap-5 arrow-sequence"
@@ -788,7 +789,7 @@
         </div>
 
         <!-- Feature card (closer to top) -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-19">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-19 fade-up">
           <div
             class="bg-white rounded-2xl shadow-lg grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-black/10 overflow-hidden border border-[red]"
           >
@@ -796,8 +797,12 @@
             <div
               class="p-6 transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-2xl hover:bg-gray-50"
             >
-              <h4 class="text-red-600 font-bold mb-2 text-xl">BIS Certified</h4>
-              <p class="text-gray-600 text-sm leading-relaxed font-bold">
+              <h4 class="text-red-600 font-bold mb-2 text-xl fade-left">
+                BIS Certified
+              </h4>
+              <p
+                class="text-gray-600 text-sm leading-relaxed font-bold fade-right"
+              >
                 Complies with national quality and safety standards.
               </p>
             </div>
@@ -805,10 +810,12 @@
             <div
               class="p-6 transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-2xl hover:bg-gray-50"
             >
-              <h4 class="text-red-600 font-bold mb-2 text-xl">
+              <h4 class="text-red-600 font-bold mb-2 text-xl fade-left">
                 Advanced Technology
               </h4>
-              <p class="text-gray-600 text-sm leading-relaxed font-bold">
+              <p
+                class="text-gray-600 text-sm leading-relaxed font-bold fade-right"
+              >
                 Manufactured using modern processes for consistent strength.
               </p>
             </div>
@@ -816,10 +823,12 @@
             <div
               class="p-6 transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-2xl hover:bg-gray-50"
             >
-              <h4 class="text-red-600 font-bold mb-2 text-xl">
+              <h4 class="text-red-600 font-bold mb-2 text-xl fade-left">
                 Anti-Corrosion
               </h4>
-              <p class="text-gray-600 text-sm leading-relaxed font-bold">
+              <p
+                class="text-gray-600 text-sm leading-relaxed font-bold fade-right"
+              >
                 Special coating protects steel from rust and damage.
               </p>
             </div>
@@ -827,8 +836,12 @@
             <div
               class="p-6 transition-all duration-300 ease-out hover:-translate-y-3 hover:shadow-2xl hover:bg-gray-50"
             >
-              <h4 class="text-red-600 font-bold mb-2 text-xl">Best Grip</h4>
-              <p class="text-gray-600 text-sm leading-relaxed font-bold">
+              <h4 class="text-red-600 font-bold mb-2 text-xl fade-left">
+                Best Grip
+              </h4>
+              <p
+                class="text-gray-600 text-sm leading-relaxed font-bold fade-right"
+              >
                 Optimized rib pattern ensures strong concrete bonding.
               </p>
             </div>
@@ -837,609 +850,1336 @@
       </section>
 
       <!-- Logo filling section -->
-       <section class="w-full bg-red-600 py-14 md:py-20 my-5">
-  <div class="max-w-7xl mx-auto px-6">
+      <section class="w-full bg-red-600 py-14 md:py-20 my-5">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-4 md:gap-6"
+          >
+            <!-- LEFT TEXT -->
+            <div class="text-white text-center md:text-left">
+              <p
+                class="text-sm lg:text-xl tracking-wide mb-2 opacity-90 fade-down"
+              >
+                The Mark of Integrity Is
+              </p>
+              <h2
+                class="text-4xl md:text-6xl lg:text-[110px] xl:text-9xl font-extrabold tracking-wide fade-down"
+              >
+                APEX
+              </h2>
+            </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-4 md:gap-6">
+            <!-- CENTER IMAGE -->
 
-      <!-- LEFT TEXT -->
-      <div class="text-white text-center md:text-left">
-        <p class="text-sm lg:text-xl tracking-wide mb-2 opacity-90">
-          The Mark of Integrity Is
-        </p>
-        <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wide">
-          APEX
-        </h2>
-      </div>
+            <div class="flex justify-center">
+              <svg
+                class="apex-logo w-56 md:w-70 lg:w-[290px]"
+                viewBox="0 0 317 387"
+                fill="none"
+              >
+                <defs>
+                  <!-- Vertical fill mask -->
+                  <mask id="fillMask">
+                    <rect
+                      class="fill-anim"
+                      x="0"
+                      y="-387"
+                      width="317"
+                      height="387"
+                      fill="white"
+                    />
+                  </mask>
 
-      <!-- CENTER IMAGE -->
+                  <!-- Soft glow -->
+                  <filter
+                    id="softGlow"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="6" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Logo paths -->
+                <g mask="url(#fillMask)" filter="url(#softGlow)">
+                  <path
+                    d="M138.812 73.6844L299.963 192.263L295.892 143.647L158.515 0L19.907 147.504L16.3837 189.32L138.812 73.6844Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M305.686 259.938L302.163 218.258L129.723 109.152L14.1022 216.77L10.5447 258.923L108.515 180.502L305.686 259.938Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M311.083 324.023L307.936 286.572L99.4079 218.301L8.45036 283.494L4.927 325.478L79.3965 289.549L311.083 324.023Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M316.247 385.295L313.374 351.058L65.473 324.906L2.83921 350.28L0 383.84V386.073H317V379.611L316.247 385.295Z"
+                    fill="white"
+                  />
+                </g>
+              </svg>
+            </div>
+
+            <!-- RIGHT TEXT -->
+            <div class="text-white text-center md:text-right fade-up">
+              <h2
+                class="text-4xl md:text-6xl lg:text-[110px] xl:text-9xl font-extrabold tracking-wide mb-2"
+              >
+                TRUST
+              </h2>
+              <p class="text-sm opacity-90 lg:text-xl">
+                Forged Strong. Built to Last.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scroll section -->
+
+      <section
+        class="relative w-full min-h-[300vh] fade-up"
+        id="whyChooseScroll"
+      >
+        <!-- CARD 1 -->
+        <div
+          class="card sticky top-0 h-[100svh] flex items-center justify-center"
+        >
+          <div class="card-inner">
+            <h1
+              class="text-center font-bold leading-tight text-6xl sm:text-3xl md:text-9xl lg:text-[130px]"
+            >
+              <span class="block text-black">WHY</span>
+
+              <!-- Rotating bar -->
+              <div
+                class="word-rotate w-full max-w-[700px] overflow-hidden my-4 text-xl sm:text-3xl md:text-5xl lg:text-7xl h-[1.4em]"
+              >
+                <div class="rotate-track">
+                  <span>TRUST</span>
+                  <span>VALUE</span>
+                  <span>RELY ON</span>
+                  <span>BELIEVE</span>
+                  <span>BACK</span>
+                  <span>BUILD WITH</span>
+                </div>
+              </div>
+
+              <span class="block text-black">US</span>
+            </h1>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="card sticky top-0 h-[100svh] flex items-center justify-center"
+        >
+          <img
+            src="Apex-Images/scroll-bg-img-1.jpg"
+            class="bg-parallax absolute w-full h-[460px] sm:h-[460px] md:h-[520px] object-cover"
+          />
+
+          <div
+            class="card-inner relative bg-white rounded-2xl w-[90%] md:w-[50%] max-w-5xl px-10 py-20"
+          >
+            <div
+              class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6"
+            >
+              <div class="max-w-md">
+                <h3 class="text-xl font-bold mb-3">Sustainable Approach</h3>
+                <p class="text-gray-500/80 leading-relaxed font-bold">
+                  We integrate eco-friendly materials and processes from
+                  inception, reducing carbon footprint while maximizing product
+                  longevity .
+                </p>
+              </div>
+
+              <div
+                class="text-red-600 font-black text-[70px] sm:text-[120px] md:text-[160px] leading-none"
+              >
+                <h1>01</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="card sticky top-0 h-[70svh] flex items-center justify-center"
+        >
+          <img
+            src="Apex-Images/scroll-bg-img-2.jpg"
+            class="bg-parallax absolute w-full h-[460px] sm:h-[460px] md:h-[520px] object-cover"
+          />
+
+          <div
+            class="card-inner relative bg-white rounded-2xl w-[90%] md:w-[50%] max-w-5xl px-10 py-20"
+          >
+            <div
+              class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6"
+            >
+              <div class="max-w-md">
+                <h3 class="text-xl font-bold mb-3">Innovative Technology</h3>
+                <p class="text-gray-500/80 leading-relaxed font-bold">
+                  Through advanced engineering and automation tools, we deliver
+                  scalable, future-ready systems engineered to evolve with
+                  demands.
+                </p>
+              </div>
+
+              <div
+                class="text-red-600 font-black text-[70px] sm:text-[120px] md:text-[160px] leading-none"
+              >
+                <h1>02</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div
+          class="card sticky top-0 h-[100svh] flex items-center justify-center"
+        >
+          <img
+            src="Apex-Images/scroll-bg-img-3.jpg"
+            class="bg-parallax absolute w-full h-[460px] sm:h-[460px] md:h-[520px] object-cover"
+          />
+
+          <div
+            class="card-inner relative bg-white rounded-2xl w-[90%] md:w-[50%] max-w-5xl px-10 py-20"
+          >
+            <div
+              class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6"
+            >
+              <div class="max-w-md">
+                <h3 class="text-xl font-bold mb-3">Expert Team</h3>
+                <p class="text-gray-500/80 leading-relaxed font-bold">
+                  Our seasoned professionals combine decades of hands-on
+                  experience across diverse projects, ensuring precision in
+                  execution, unmatched support, customer satisfaction .
+                </p>
+              </div>
+
+              <div
+                class="text-red-600 font-black text-[70px] sm:text-[120px] md:text-[160px] leading-none"
+              >
+                <h1>03</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-<div class="flex justify-center">
-  <svg
-    class="apex-logo w-56 md:w-70 lg:w-[320px]"
-    viewBox="0 0 317 387"
-    fill="none"
-    
-  >
-    <defs>
-      <!-- Vertical fill mask -->
-      <mask id="fillMask">
-        <rect
-          class="fill-anim"
-          x="0"
-          y="-387"
-          width="317"
-          height="387"
-          fill="white"
-        />
-      </mask>
+      
 
-      <!-- Soft glow -->
-      <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="6" result="blur" />
-        <feMerge>
-          <feMergeNode in="blur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
-
-    <!-- Logo paths -->
-    <g mask="url(#fillMask)" filter="url(#softGlow)">
-      <path
-        d="M138.812 73.6844L299.963 192.263L295.892 143.647L158.515 0L19.907 147.504L16.3837 189.32L138.812 73.6844Z"
-        fill="white"
-      />
-      <path
-        d="M305.686 259.938L302.163 218.258L129.723 109.152L14.1022 216.77L10.5447 258.923L108.515 180.502L305.686 259.938Z"
-        fill="white"
-      />
-      <path
-        d="M311.083 324.023L307.936 286.572L99.4079 218.301L8.45036 283.494L4.927 325.478L79.3965 289.549L311.083 324.023Z"
-        fill="white"
-      />
-      <path
-        d="M316.247 385.295L313.374 351.058L65.473 324.906L2.83921 350.28L0 383.84V386.073H317V379.611L316.247 385.295Z"
-        fill="white"
-      />
-    </g>
-  </svg>
-</div>
-
-
-
-
-
-
-      <!-- RIGHT TEXT -->
-      <div class="text-white text-center md:text-right">
-        <h2 class="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-wide mb-2">
-          TRUST
-        </h2>
-        <p class="text-sm opacity-90 lg:text-xl">
-          Forged Strong. Built to Last.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Scroll section -->
-
-<section class="relative w-full min-h-[300vh]"  id="whyChooseScroll">
-
-  <!-- CARD 1 -->
-  <div class="card sticky top-0 h-[100svh]  flex items-center justify-center">
-    <div class="card-inner">
-      <h1 class="text-center font-bold leading-tight
-           text-6xl sm:text-3xl md:text-9xl lg:text-[130px]">
-  <span class="block text-black">WHY</span>
-
-  <!-- Rotating bar -->
-  <div class="word-rotate w-full max-w-[700px] overflow-hidden my-4
-              text-xl sm:text-3xl md:text-5xl lg:text-7xl h-[1.4em]">
-
-    <div class="rotate-track">
-
-      <span>TRUST</span>
-      <span>VALUE</span>
-      <span>RELY ON</span>
-      <span>BELIEVE</span>
-      <span>BACK</span>
-      <span>BUILD WITH</span>
-
-    </div>
-  </div>
-
-  <span class="block text-black">US</span>
-</h1>
-
-    </div>
-  </div>
-
-  <!-- CARD 2 -->
-  <div class="card sticky top-0 h-[100svh]  flex items-center justify-center">
-
-    <img src="Apex-Images/scroll-bg-img-1.jpg"
-         class="bg-parallax absolute w-full h-[460px] sm:h-[460px] md:h-[520px] object-cover" />
-
-    <div class="card-inner relative bg-white rounded-2xl w-[90%] md:w-[50%] max-w-5xl px-10 py-20">
-
-      <div class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div class="max-w-md">
-          <h3 class="text-xl font-bold mb-3">Sustainable Approach</h3>
-          <p class="text-gray-500/80 leading-relaxed font-bold">
-           We integrate eco-friendly materials and processes from inception, reducing carbon footprint while maximizing product longevity .
-          </p>
-        </div>
-
-        <div class="text-red-600 font-black text-[70px] sm:text-[120px] md:text-[160px] leading-none"> <h1>01</h1></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CARD 3 -->
-  <div class="card sticky top-0 h-[70svh] flex items-center justify-center">
-
-    <img src="Apex-Images/scroll-bg-img-2.jpg"
-         class="bg-parallax absolute w-full h-[460px] sm:h-[460px] md:h-[520px] object-cover" />
-
-    <div class="card-inner relative bg-white rounded-2xl w-[90%] md:w-[50%] max-w-5xl px-10 py-20">
-
-      <div class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div class="max-w-md">
-          <h3 class="text-xl font-bold mb-3">Innovative Technology</h3>
-          <p class="text-gray-500/80 leading-relaxed font-bold">
-            Through advanced engineering and automation tools, we deliver scalable, future-ready systems engineered to evolve with demands.
-          </p>
-        </div>
-
-        <div class="text-red-600 font-black text-[70px] sm:text-[120px] md:text-[160px] leading-none"><h1>02</h1></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CARD 4 -->
-  <div class="card sticky top-0 h-[100svh] flex items-center justify-center">
-
-    <img src="Apex-Images/scroll-bg-img-3.jpg"
-         class="bg-parallax absolute w-full h-[460px] sm:h-[460px] md:h-[520px] object-cover" />
-
-    <div class="card-inner relative bg-white rounded-2xl w-[90%] md:w-[50%] max-w-5xl px-10 py-20">
-
-      <div class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div class="max-w-md">
-          <h3 class="text-xl font-bold mb-3">Expert Team</h3>
-          <p class="text-gray-500/80 leading-relaxed font-bold">
-            Our seasoned professionals combine decades of hands-on experience across diverse projects, ensuring precision in execution, unmatched support, customer satisfaction .
-          </p>
-        </div>
-
-        <div class="text-red-600 font-black text-[70px] sm:text-[120px] md:text-[160px] leading-none"> <h1>03</h1></div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!-- Reliable TMT Bars  -->
-<section class="flex flex-col lg:flex-row w-full min-h-[420px] bg-red-600 overflow-hidden">
-
-  <!-- LEFT PATTERN -->
-  <div class="relative w-full hidden lg:block lg:w-[32%] h-[240px] md:h-[320px] lg:h-auto bg-red-600 overflow-hidden">
-
-    <!-- BASE RED CHEVRONS -->
-    <div class="absolute inset-0">
-      <!-- ORIGINAL SVG (UNCHANGED) -->
-    </div>
-
-    <!-- WHITE CHEVRONS WITH GLOW -->
-    <div class="absolute inset-0 white-chevrons">
-      <!-- YOUR MASKED SVG (UNCHANGED) -->
-       <svg width="463" height="600" viewBox="0 0 463 600" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g clip-path="url(#clip0_1190_108)">
-<path d="M77.26 -12H0V57.8268H77.26V-12Z" fill="url(#pattern0_1190_108)"/>
-<path d="M154.26 -12H77V57.8268H154.26V-12Z" fill="url(#pattern1_1190_108)"/>
-<path d="M231.26 -12H154V57.8268H231.26V-12Z" fill="url(#pattern2_1190_108)"/>
-<path d="M308.26 -12H231V57.8268H308.26V-12Z" fill="url(#pattern3_1190_108)"/>
-<path d="M385.26 -12H308V57.8268H385.26V-12Z" fill="url(#pattern4_1190_108)"/>
-<path d="M462.26 -12H385V57.8268H462.26V-12Z" fill="url(#pattern5_1190_108)"/>
-<path d="M77.26 58H0V127.827H77.26V58Z" fill="url(#pattern6_1190_108)"/>
-<path d="M154.26 58H77V127.827H154.26V58Z" fill="url(#pattern7_1190_108)"/>
-<path d="M231.26 58H154V127.827H231.26V58Z" fill="url(#pattern8_1190_108)"/>
-<path d="M308.26 58H231V127.827H308.26V58Z" fill="url(#pattern9_1190_108)"/>
-<path d="M385.26 58H308V127.827H385.26V58Z" fill="url(#pattern10_1190_108)"/>
-<path d="M462.26 58H385V127.827H462.26V58Z" fill="url(#pattern11_1190_108)"/>
-<path d="M77.26 128H0V197.827H77.26V128Z" fill="url(#pattern12_1190_108)"/>
-<path d="M154.26 128H77V197.827H154.26V128Z" fill="url(#pattern13_1190_108)"/>
-<path d="M231.26 128H154V197.827H231.26V128Z" fill="url(#pattern14_1190_108)"/>
-<path d="M308.26 128H231V197.827H308.26V128Z" fill="url(#pattern15_1190_108)"/>
-<path d="M385.26 128H308V197.827H385.26V128Z" fill="url(#pattern16_1190_108)"/>
-<path d="M462.26 128H385V197.827H462.26V128Z" fill="url(#pattern17_1190_108)"/>
-<path d="M77.26 198H0V267.827H77.26V198Z" fill="url(#pattern18_1190_108)"/>
-<path d="M154.26 198H77V267.827H154.26V198Z" fill="url(#pattern19_1190_108)"/>
-<path d="M231.26 198H154V267.827H231.26V198Z" fill="url(#pattern20_1190_108)"/>
-<path d="M308.26 198H231V267.827H308.26V198Z" fill="url(#pattern21_1190_108)"/>
-<path d="M385.26 198H308V267.827H385.26V198Z" fill="url(#pattern22_1190_108)"/>
-<path d="M462.26 198H385V267.827H462.26V198Z" fill="url(#pattern23_1190_108)"/>
-<path d="M77.26 268H0V337.827H77.26V268Z" fill="url(#pattern24_1190_108)"/>
-<path d="M154.26 268H77V337.827H154.26V268Z" fill="url(#pattern25_1190_108)"/>
-<path d="M231.26 268H154V337.827H231.26V268Z" fill="url(#pattern26_1190_108)"/>
-<path d="M308.26 268H231V337.827H308.26V268Z" fill="url(#pattern27_1190_108)"/>
-<path d="M385.26 268H308V337.827H385.26V268Z" fill="url(#pattern28_1190_108)"/>
-<path d="M462.26 268H385V337.827H462.26V268Z" fill="url(#pattern29_1190_108)"/>
-<path d="M77.26 338H0V407.827H77.26V338Z" fill="url(#pattern30_1190_108)"/>
-<path d="M154.26 338H77V407.827H154.26V338Z" fill="url(#pattern31_1190_108)"/>
-<path d="M231.26 338H154V407.827H231.26V338Z" fill="url(#pattern32_1190_108)"/>
-<path d="M308.26 338H231V407.827H308.26V338Z" fill="url(#pattern33_1190_108)"/>
-<path d="M385.26 338H308V407.827H385.26V338Z" fill="url(#pattern34_1190_108)"/>
-<path d="M462.26 338H385V407.827H462.26V338Z" fill="url(#pattern35_1190_108)"/>
-<path d="M77.26 408H0V477.827H77.26V408Z" fill="url(#pattern36_1190_108)"/>
-<path d="M154.26 408H77V477.827H154.26V408Z" fill="url(#pattern37_1190_108)"/>
-<path d="M231.26 408H154V477.827H231.26V408Z" fill="url(#pattern38_1190_108)"/>
-<path d="M308.26 408H231V477.827H308.26V408Z" fill="url(#pattern39_1190_108)"/>
-<path d="M385.26 408H308V477.827H385.26V408Z" fill="url(#pattern40_1190_108)"/>
-<path d="M462.26 408H385V477.827H462.26V408Z" fill="url(#pattern41_1190_108)"/>
-<path d="M77.26 478H0V547.827H77.26V478Z" fill="url(#pattern42_1190_108)"/>
-<path d="M154.26 478H77V547.827H154.26V478Z" fill="url(#pattern43_1190_108)"/>
-<path d="M231.26 478H154V547.827H231.26V478Z" fill="url(#pattern44_1190_108)"/>
-<path d="M308.26 478H231V547.827H308.26V478Z" fill="url(#pattern45_1190_108)"/>
-<path d="M385.26 478H308V547.827H385.26V478Z" fill="url(#pattern46_1190_108)"/>
-<path d="M462.26 478H385V547.827H462.26V478Z" fill="url(#pattern47_1190_108)"/>
-<path d="M77.26 548H0V617.827H77.26V548Z" fill="url(#pattern48_1190_108)"/>
-<path d="M154.26 548H77V617.827H154.26V548Z" fill="url(#pattern49_1190_108)"/>
-<path d="M231.26 548H154V617.827H231.26V548Z" fill="url(#pattern50_1190_108)"/>
-<path d="M308.26 548H231V617.827H308.26V548Z" fill="url(#pattern51_1190_108)"/>
-<path d="M385.26 548H308V617.827H385.26V548Z" fill="url(#pattern52_1190_108)"/>
-<path d="M462.26 548H385V617.827H462.26V548Z" fill="url(#pattern53_1190_108)"/>
-</g>
-<defs>
-<pattern id="pattern0_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern1_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern2_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern3_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern4_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern5_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern6_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern7_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern8_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern9_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern10_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern11_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern12_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern13_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern14_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern15_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern16_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern17_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern18_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern19_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern20_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern21_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern22_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern23_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern24_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern25_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern26_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern27_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern28_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern29_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern30_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern31_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern32_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern33_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern34_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern35_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern36_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern37_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern38_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern39_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern40_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern41_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern42_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern43_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern44_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern45_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern46_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern47_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern48_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern49_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern50_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern51_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern52_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<pattern id="pattern53_1190_108" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_1190_108" transform="scale(0.00291545 0.00322581)"/>
-</pattern>
-<clipPath id="clip0_1190_108">
-<rect width="463" height="600" fill="white"/>
-</clipPath>
-<image id="image0_1190_108" width="343" height="310" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
-</defs>
-</svg>
-
-    </div>
-
-  </div>
-
-  <!-- RIGHT CONTENT -->
-  <div class="w-full lg:w-[68%] flex items-center px-6 sm:px-10 md:px-14 lg:px-24 py-10 lg:py-14 text-white">
-
-    <div class="max-w-[620px]">
-
-      <h1
-        class="text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px]
-               font-bold leading-snug mb-4 md:mb-6"
+      <!-- Reliable TMT Bars  -->
+      <section
+        class="flex flex-col lg:flex-row w-full min-h-[420px] bg-red-600 overflow-hidden"
       >
-        Reliable TMT Bars for <br class="hidden sm:block" />
-        India’s Next Leap
-      </h1>
-
-      <p
-        class="text-[14px] sm:text-[15px] leading-relaxed mb-8 md:mb-10 opacity-95"
-      >
-        At Apex Dura, our premium TMT 500 and 550 bars are crafted by
-        Khyati Steel Industries Pvt. Ltd., a trusted name driven by the
-        vision of contributing to India’s growth story. Every bar we
-        produce reflects a blend of engineering precision, material
-        integrity, and a deep commitment to building long-term
-        partnerships with our clients.
-      </p>
-
-      <a
-        href="#"
-        class="inline-flex items-center gap-2 bg-white text-red-600
-               font-bold text-sm px-6 py-3 rounded-lg w-fit
-               transition hover:-translate-y-[2px] hover:shadow-lg"
-      >
-        Learn More
-        <img src="Apex-icons/Next-large.png" alt="next" class="w-3" />
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-    </main>
-
-  <footer class="w-full bg-gray-50 pt-16 pb-8 ">
-
-  <!-- Top CTA -->
-  <div class="max-w-7xl mx-auto px-6 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-    <div>
-      <h2 class="text-3xl font-bold text-red-600 mb-2">
-        Build Strong. Build with Apex.
-      </h2>
-      <p class="text-gray-600 max-w-xl text-sm">
-        Engineered TMT bars designed for superior bonding, durability, and performance.
-        Trusted by builders for projects that demand strength and reliability.
-      </p>
-    </div>
-
-    <button class="flex items-center gap-2 border border-red-500 text-black font-bold px-5 py-2 rounded-md hover:bg-red-500/65 hover:text-white transition cursor-pointer">
-      Get A Free Estimate
-      <span class="text-lg"><img src="Apex-icons/Next-large.png" class="w-4" alt=""></span>
-    </button>
-  </div>
-
-  <!-- Footer Card -->
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="bg-white rounded-3xl  shadow-[0_0_30px_rgba(0,0,0,0.1)] p-8 md:p-12">
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-        <!-- LEFT: Logo + description + socials -->
-        <div>
-          <!-- LOGO -->
-          <div class="mb-4">
-            <!--  logo -->
-              <a href="#">
-                <img src="Apex-icons/Logo.png" class="h-10 cursor-pointer" alt="Apex Dura">
-              </a>
-            
+        <!-- LEFT PATTERN -->
+        <div
+          class="relative w-full hidden lg:block lg:w-[32%] h-[240px] md:h-[320px] lg:h-auto bg-red-600 overflow-hidden fade-right"
+        >
+          <!-- BASE RED CHEVRONS -->
+          <div class="absolute inset-0">
+            <!-- ORIGINAL SVG (UNCHANGED) -->
           </div>
 
-          <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
-            Apex TMT is committed to delivering high-quality, BIS-certified TMT bars engineered for strength,
-            durability, and safety. Trusted for building structures that stand strong for generations.
+          <!-- WHITE CHEVRONS WITH GLOW -->
+          <div class="absolute inset-0 white-chevrons">
+            <!-- YOUR MASKED SVG (UNCHANGED) -->
+            <svg
+              width="463"
+              height="600"
+              viewBox="0 0 463 600"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g clip-path="url(#clip0_1190_108)">
+                <path
+                  d="M77.26 -12H0V57.8268H77.26V-12Z"
+                  fill="url(#pattern0_1190_108)"
+                />
+                <path
+                  d="M154.26 -12H77V57.8268H154.26V-12Z"
+                  fill="url(#pattern1_1190_108)"
+                />
+                <path
+                  d="M231.26 -12H154V57.8268H231.26V-12Z"
+                  fill="url(#pattern2_1190_108)"
+                />
+                <path
+                  d="M308.26 -12H231V57.8268H308.26V-12Z"
+                  fill="url(#pattern3_1190_108)"
+                />
+                <path
+                  d="M385.26 -12H308V57.8268H385.26V-12Z"
+                  fill="url(#pattern4_1190_108)"
+                />
+                <path
+                  d="M462.26 -12H385V57.8268H462.26V-12Z"
+                  fill="url(#pattern5_1190_108)"
+                />
+                <path
+                  d="M77.26 58H0V127.827H77.26V58Z"
+                  fill="url(#pattern6_1190_108)"
+                />
+                <path
+                  d="M154.26 58H77V127.827H154.26V58Z"
+                  fill="url(#pattern7_1190_108)"
+                />
+                <path
+                  d="M231.26 58H154V127.827H231.26V58Z"
+                  fill="url(#pattern8_1190_108)"
+                />
+                <path
+                  d="M308.26 58H231V127.827H308.26V58Z"
+                  fill="url(#pattern9_1190_108)"
+                />
+                <path
+                  d="M385.26 58H308V127.827H385.26V58Z"
+                  fill="url(#pattern10_1190_108)"
+                />
+                <path
+                  d="M462.26 58H385V127.827H462.26V58Z"
+                  fill="url(#pattern11_1190_108)"
+                />
+                <path
+                  d="M77.26 128H0V197.827H77.26V128Z"
+                  fill="url(#pattern12_1190_108)"
+                />
+                <path
+                  d="M154.26 128H77V197.827H154.26V128Z"
+                  fill="url(#pattern13_1190_108)"
+                />
+                <path
+                  d="M231.26 128H154V197.827H231.26V128Z"
+                  fill="url(#pattern14_1190_108)"
+                />
+                <path
+                  d="M308.26 128H231V197.827H308.26V128Z"
+                  fill="url(#pattern15_1190_108)"
+                />
+                <path
+                  d="M385.26 128H308V197.827H385.26V128Z"
+                  fill="url(#pattern16_1190_108)"
+                />
+                <path
+                  d="M462.26 128H385V197.827H462.26V128Z"
+                  fill="url(#pattern17_1190_108)"
+                />
+                <path
+                  d="M77.26 198H0V267.827H77.26V198Z"
+                  fill="url(#pattern18_1190_108)"
+                />
+                <path
+                  d="M154.26 198H77V267.827H154.26V198Z"
+                  fill="url(#pattern19_1190_108)"
+                />
+                <path
+                  d="M231.26 198H154V267.827H231.26V198Z"
+                  fill="url(#pattern20_1190_108)"
+                />
+                <path
+                  d="M308.26 198H231V267.827H308.26V198Z"
+                  fill="url(#pattern21_1190_108)"
+                />
+                <path
+                  d="M385.26 198H308V267.827H385.26V198Z"
+                  fill="url(#pattern22_1190_108)"
+                />
+                <path
+                  d="M462.26 198H385V267.827H462.26V198Z"
+                  fill="url(#pattern23_1190_108)"
+                />
+                <path
+                  d="M77.26 268H0V337.827H77.26V268Z"
+                  fill="url(#pattern24_1190_108)"
+                />
+                <path
+                  d="M154.26 268H77V337.827H154.26V268Z"
+                  fill="url(#pattern25_1190_108)"
+                />
+                <path
+                  d="M231.26 268H154V337.827H231.26V268Z"
+                  fill="url(#pattern26_1190_108)"
+                />
+                <path
+                  d="M308.26 268H231V337.827H308.26V268Z"
+                  fill="url(#pattern27_1190_108)"
+                />
+                <path
+                  d="M385.26 268H308V337.827H385.26V268Z"
+                  fill="url(#pattern28_1190_108)"
+                />
+                <path
+                  d="M462.26 268H385V337.827H462.26V268Z"
+                  fill="url(#pattern29_1190_108)"
+                />
+                <path
+                  d="M77.26 338H0V407.827H77.26V338Z"
+                  fill="url(#pattern30_1190_108)"
+                />
+                <path
+                  d="M154.26 338H77V407.827H154.26V338Z"
+                  fill="url(#pattern31_1190_108)"
+                />
+                <path
+                  d="M231.26 338H154V407.827H231.26V338Z"
+                  fill="url(#pattern32_1190_108)"
+                />
+                <path
+                  d="M308.26 338H231V407.827H308.26V338Z"
+                  fill="url(#pattern33_1190_108)"
+                />
+                <path
+                  d="M385.26 338H308V407.827H385.26V338Z"
+                  fill="url(#pattern34_1190_108)"
+                />
+                <path
+                  d="M462.26 338H385V407.827H462.26V338Z"
+                  fill="url(#pattern35_1190_108)"
+                />
+                <path
+                  d="M77.26 408H0V477.827H77.26V408Z"
+                  fill="url(#pattern36_1190_108)"
+                />
+                <path
+                  d="M154.26 408H77V477.827H154.26V408Z"
+                  fill="url(#pattern37_1190_108)"
+                />
+                <path
+                  d="M231.26 408H154V477.827H231.26V408Z"
+                  fill="url(#pattern38_1190_108)"
+                />
+                <path
+                  d="M308.26 408H231V477.827H308.26V408Z"
+                  fill="url(#pattern39_1190_108)"
+                />
+                <path
+                  d="M385.26 408H308V477.827H385.26V408Z"
+                  fill="url(#pattern40_1190_108)"
+                />
+                <path
+                  d="M462.26 408H385V477.827H462.26V408Z"
+                  fill="url(#pattern41_1190_108)"
+                />
+                <path
+                  d="M77.26 478H0V547.827H77.26V478Z"
+                  fill="url(#pattern42_1190_108)"
+                />
+                <path
+                  d="M154.26 478H77V547.827H154.26V478Z"
+                  fill="url(#pattern43_1190_108)"
+                />
+                <path
+                  d="M231.26 478H154V547.827H231.26V478Z"
+                  fill="url(#pattern44_1190_108)"
+                />
+                <path
+                  d="M308.26 478H231V547.827H308.26V478Z"
+                  fill="url(#pattern45_1190_108)"
+                />
+                <path
+                  d="M385.26 478H308V547.827H385.26V478Z"
+                  fill="url(#pattern46_1190_108)"
+                />
+                <path
+                  d="M462.26 478H385V547.827H462.26V478Z"
+                  fill="url(#pattern47_1190_108)"
+                />
+                <path
+                  d="M77.26 548H0V617.827H77.26V548Z"
+                  fill="url(#pattern48_1190_108)"
+                />
+                <path
+                  d="M154.26 548H77V617.827H154.26V548Z"
+                  fill="url(#pattern49_1190_108)"
+                />
+                <path
+                  d="M231.26 548H154V617.827H231.26V548Z"
+                  fill="url(#pattern50_1190_108)"
+                />
+                <path
+                  d="M308.26 548H231V617.827H308.26V548Z"
+                  fill="url(#pattern51_1190_108)"
+                />
+                <path
+                  d="M385.26 548H308V617.827H385.26V548Z"
+                  fill="url(#pattern52_1190_108)"
+                />
+                <path
+                  d="M462.26 548H385V617.827H462.26V548Z"
+                  fill="url(#pattern53_1190_108)"
+                />
+              </g>
+              <defs>
+                <pattern
+                  id="pattern0_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern1_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern2_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern3_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern4_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern5_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern6_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern7_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern8_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern9_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern10_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern11_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern12_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern13_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern14_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern15_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern16_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern17_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern18_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern19_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern20_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern21_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern22_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern23_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern24_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern25_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern26_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern27_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern28_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern29_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern30_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern31_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern32_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern33_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern34_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern35_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern36_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern37_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern38_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern39_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern40_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern41_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern42_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern43_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern44_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern45_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern46_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern47_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern48_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern49_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern50_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern51_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern52_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <pattern
+                  id="pattern53_1190_108"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_1190_108"
+                    transform="scale(0.00291545 0.00322581)"
+                  />
+                </pattern>
+                <clipPath id="clip0_1190_108">
+                  <rect width="463" height="600" fill="white" />
+                </clipPath>
+                <image
+                  id="image0_1190_108"
+                  width="343"
+                  height="310"
+                  preserveAspectRatio="none"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div
+          class="w-full lg:w-[68%] flex items-center px-6 sm:px-10 md:px-14 lg:px-24 py-10 lg:py-14 text-white fade-left"
+        >
+          <div class="max-w-[620px]">
+            <h1
+              class="text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px] font-bold leading-snug mb-4 md:mb-6 fade-left"
+            >
+              Reliable TMT Bars for <br class="hidden sm:block" />
+              India’s Next Leap
+            </h1>
+
+            <p
+              class="text-[14px] sm:text-[15px] leading-relaxed mb-8 md:mb-10 opacity-95 fade-right"
+            >
+              At Apex Dura, our premium TMT 500 and 550 bars are crafted by
+              Khyati Steel Industries Pvt. Ltd., a trusted name driven by the
+              vision of contributing to India’s growth story. Every bar we
+              produce reflects a blend of engineering precision, material
+              integrity, and a deep commitment to building long-term
+              partnerships with our clients.
+            </p>
+
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 bg-white text-red-600 font-bold text-sm px-6 py-3 rounded-lg w-fit transition hover:-translate-y-[2px] hover:shadow-lg fade-in"
+            >
+              Learn More
+              <img src="Apex-icons/Next-large.png" alt="next" class="w-3" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-gray-50 pt-16 pb-8 fade-up">
+      <!-- Top CTA -->
+      <div
+        class="max-w-7xl mx-auto px-6 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-red-600 mb-2 fade-left">
+            Build Strong. Build with Apex.
+          </h2>
+          <p class="text-gray-600 max-w-xl text-sm fade-down">
+            Engineered TMT bars designed for superior bonding, durability, and
+            performance. Trusted by builders for projects that demand strength
+            and reliability.
           </p>
-
-          <!-- SOCIAL ICONS -->
-          <div class="flex gap-3 items-center">
-
-  <a href="#" class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md">
-    <img src="Apex-icons/Facebook.svg"  alt="Facebook">
-  </a>
-
-  <a href="#" class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md">
-    <img src="Apex-icons/Linkedin.svg" alt="LinkedIn">
-  </a>
-
-  <a href="#" class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md">
-    <img src="Apex-icons/Instagram.svg" alt="Instagram">
-  </a>
-
-  <a href="#" class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md">
-    <img src="Apex-icons/Youtube.svg" alt="YouTube">
-  </a>
-
-  <a href="#" class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md">
-    <img src="Apex-icons/X.svg" alt="twitter">
-  </a>
-
-</div>
-
         </div>
 
-        <!-- CENTER: Quick Links -->
-        <div>
-          <h4 class="text-red-600 font-semibold mb-4">Quick Links</h4>
-          <ul class="space-y-3 text-gray-700 text-sm">
-            <li class="hover:text-red-500 cursor-pointer">Products</li>
-            <li class="hover:text-red-500 cursor-pointer">Infrastructure</li>
-            <li class="hover:text-red-500 cursor-pointer">Investor Corner</li>
-            <li class="hover:text-red-500 cursor-pointer">Estimator</li>
-            <li class="hover:text-red-500 cursor-pointer">Contact Us</li>
-          </ul>
-        </div>
-
-        <!-- RIGHT: Info -->
-        <div>
-          <h4 class="text-red-600 font-semibold mb-4">Info</h4>
-          <ul class="space-y-3 text-gray-700 text-sm">
-            <li class="hover:text-red-500 cursor-pointer">Privacy Policy</li>
-            <li class="hover:text-red-500 cursor-pointer">Terms of Service</li>
-          </ul>
-        </div>
-
+        <button
+          class="flex items-center gap-2 border border-red-500 text-black font-bold px-5 py-2 rounded-md hover:bg-red-500/65 hover:text-white transition cursor-pointer fade-right"
+        >
+          Get A Free Estimate
+          <span class="text-lg"
+            ><img src="Apex-icons/Next-large.png" class="w-4" alt=""
+          /></span>
+        </button>
       </div>
 
-      <!-- Divider -->
-      <div class="mt-10 border-t border-red-500 pt-4 text-center">
-        <p class="text-xs lg:text-sm text-red-500">
-          Copyright ©2026 Apex – All rights reserved | Designed and Developed by Ayatiworks
-        </p>
+      <!-- Footer Card -->
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="bg-white rounded-3xl shadow-[0_0_30px_rgba(0,0,0,0.1)] p-8 md:p-12"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- LEFT: Logo + description + socials -->
+            <div>
+              <!-- LOGO -->
+              <div class="mb-4">
+                <!--  logo -->
+                <a href="#">
+                  <img
+                    src="Apex-icons/Logo.png"
+                    class="h-10 cursor-pointer"
+                    alt="Apex Dura"
+                  />
+                </a>
+              </div>
+
+              <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
+                Apex TMT is committed to delivering high-quality, BIS-certified
+                TMT bars engineered for strength, durability, and safety.
+                Trusted for building structures that stand strong for
+                generations.
+              </p>
+
+              <!-- SOCIAL ICONS -->
+              <div class="flex gap-3 items-center">
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Facebook.svg" alt="Facebook" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Linkedin.svg" alt="LinkedIn" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Instagram.svg" alt="Instagram" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Youtube.svg" alt="YouTube" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/X.svg" alt="twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- CENTER: Quick Links -->
+            <div>
+              <h4 class="text-red-600 font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="hover:text-red-500 cursor-pointer">Products</li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Infrastructure
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Investor Corner
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">Estimator</li>
+                <li class="hover:text-red-500 cursor-pointer">Contact Us</li>
+              </ul>
+            </div>
+
+            <!-- RIGHT: Info -->
+            <div>
+              <h4 class="text-red-600 font-semibold mb-4">Info</h4>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="hover:text-red-500 cursor-pointer">
+                  Privacy Policy
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Terms of Service
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="mt-10 border-t border-red-500 pt-4 text-center">
+            <p class="text-xs lg:text-sm text-red-500">
+              Copyright ©2026 Apex – All rights reserved | Designed and
+              Developed by Ayatiworks
+            </p>
+          </div>
+        </div>
       </div>
+    </footer>
 
-    </div>
-  </div>
+    <!-- Scroll Arrow Button -->
+<button id="scrollBtn"
+  class="fixed right-6 bottom-10 z-50
+         w-12 h-12 rounded-full
+         bg-white text-red-600
+         flex items-center justify-center
+         shadow-lg transition-all duration-300 hover:scale-110">
 
-</footer>
-  
+  <span id="arrowIcon" class="text-2xl">↓</span>
+</button>
+
+
 
     <script src="Js/Home-slider.js"></script>
     <script src="Js/Mobile-navbar.js"></script>
     <script src="Js/Scroll-Animation.js"></script>
     <script src="Js/Products-carouselcars.js"></script>
     <script src="Js/logo-fading.js"></script>
+    <script src="Js/Animation.js"></script>
 
-  <!-- Apex dura arooe-next anination clone script -->
-  <script>
-  const strip = document.getElementById("arrowStrip");
+    <!-- Apex dura arooe-next anination clone script -->
+    <script>
+      const strip = document.getElementById("arrowStrip");
 
-  // Clone until strip width > 2x screen width
-  while (strip.scrollWidth < window.innerWidth * 2) {
-    strip.innerHTML += strip.innerHTML;
+      // Clone until strip width > 2x screen width
+      while (strip.scrollWidth < window.innerWidth * 2) {
+        strip.innerHTML += strip.innerHTML;
+      }
+    </script>
+
+    <!-- Progress bar script  -->
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const height =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        const progress = (scrollTop / height) * 100;
+
+        document.getElementById("progressBar").style.width = progress + "%";
+      });
+    </script>
+
+    <!-- scroll arrow script bottom/up -->
+     <script>
+const btn = document.getElementById("scrollBtn");
+const icon = document.getElementById("arrowIcon");
+
+btn.addEventListener("click", () => {
+
+  const pageHeight = document.documentElement.scrollHeight;
+  const viewHeight = window.innerHeight;
+  const scrollTop = window.scrollY;
+
+  const isBottom = scrollTop + viewHeight >= pageHeight - 10;
+
+  if (isBottom) {
+    // go top
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    // go footer (bottom)
+    window.scrollTo({ top: pageHeight, behavior: "smooth" });
   }
+});
+
+
+/* change arrow direction */
+window.addEventListener("scroll", () => {
+
+  const pageHeight = document.documentElement.scrollHeight;
+  const viewHeight = window.innerHeight;
+  const scrollTop = window.scrollY;
+
+  const isBottom = scrollTop + viewHeight >= pageHeight - 10;
+
+  icon.textContent = isBottom ? "↑" : "↓";
+
+});
 </script>
+
 
   </body>
 </html>
