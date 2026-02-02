@@ -8,6 +8,7 @@ p,span,div,a,li{
 
 body{
   overflow-x: hidden;
+  
 }
 .feature-card {
   height: 160px;
@@ -98,7 +99,7 @@ body{
 .arrow-strip {
   display: flex;
   width: max-content;
-  animation: arrowMoveLTR 15s linear infinite;
+  animation: arrowMoveLTR 15s linear infinite !important;
 }
 
 
@@ -146,6 +147,31 @@ body{
 }
 
 
+.fade-out{
+  animation: logoFadeZoom 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes logoFadeZoom {
+
+  0%{
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  70%{
+    opacity: 1;
+    transform: scale(1.05) translateY(-6px); /* very soft zoom */
+  }
+
+  100%{
+    opacity: 0;
+    transform: scale(1.10) translateY(-14px); /* smooth lift + fade */
+  }
+}
+
+
+
 
 
 .apex-logo {
@@ -170,29 +196,34 @@ body{
 /* scroll section */
 
 
-.word-rotate {
-  height: 1.2em;
-  overflow: hidden;
+.rotate-track {
+  display: flex;
+  flex-direction: column;
+  animation: rotateWords 9s infinite ease-in-out;
+}
+
+/* KEY FIX */
+.rotate-track span {
+  width: 100%;                 /* same width for all */
+  height: 1.4em;
+  background: #dc2626;
   color: white;
-  
-  padding: 10px 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* center text */
 }
 
-.word-rotate span {
-  display: block;
-  animation: rotateWords 9s infinite;
-}
-
+/* smooth mobile-safe animation */
 @keyframes rotateWords {
-  0%   { transform: translateY(0); }
-  16%  { transform: translateY(-100%); }
-  32%  { transform: translateY(-200%); }
-  48%  { transform: translateY(-300%); }
-  64%  { transform: translateY(-400%); }
-  80%  { transform: translateY(-500%); }
-  90%  { transform: translateY(-500%); }
-  100% { transform: translateY(0); }
+  0%,12%   { transform: translateY(0); }
+  16%,28%  { transform: translateY(-1.4em); }
+  32%,44%  { transform: translateY(-2.8em); }
+  48%,60%  { transform: translateY(-4.2em); }
+  64%,76%  { transform: translateY(-5.6em); }
+  80%,92%  { transform: translateY(-7em); }
+  100%     { transform: translateY(0); }
 }
+
 
 
 
