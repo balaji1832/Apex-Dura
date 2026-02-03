@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Dura</title>
+    <link rel="icon" href="Apex-icons/Logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  </head>
+
+  <body>
+    <header class="w-full relative">
+      <!-- bg-image -->
+      <div
+        class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden fade-up"
+      >
+        <!-- Banner Image -->
+        <img
+          src="Apex-Images/Aboutus-banner.jpg"
+          class="w-full h-full object-cover"
+          alt="About Us Banner"
+        />
+
+        <!-- Breadcrumb -->
+        <div class="absolute bottom-6 left-6 flex items-center gap-3">
+          <!-- Home -->
+          <a
+            href="/"
+            class="flex items-center gap-2 text-red-600 px-4 py-2 rounded-md text-sm font-medium transition"
+          >
+            <!-- Home Icon -->
+            <img src="Apex-icons/Home.png" alt="Home icon " class="w-4 h-4" />
+
+            Home
+          </a>
+
+          <!-- Arrow -->
+          <span class="text-white text-lg">›</span>
+
+          <!-- About -->
+          <span
+            class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md"
+          >
+            <!-- User/About Icon -->
+            <img
+              src="Apex-icons/user-circle.png"
+              alt="user icon "
+              class="w-4 h-4"
+            />
+
+            About
+          </span>
+        </div>
+      </div>
+
+      <!-- Header Content Overlay -->
+      <div class="absolute top-0 left-0 w-full z-20">
+        <div
+          class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 md:py-6"
+        >
+          <!-- Logo -->
+          <a href="/"
+            ><img
+              src="Apex-icons/Logo.png"
+              alt="Apex Dura Logo"
+              class="h-10 sm:h-12 md:h-13 w-auto"
+          /></a>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden lg:flex items-center space-x-8 text-white text-base lg:text-lg"
+          >
+            <a href="/" class="hover:text-gray-300 transition font-semibold">
+              Home
+            </a>
+            <a
+              href="Aboutus.html"
+              class="bg-white text-red-600 px-4 py-1.5 rounded-full font-bold shadow"
+              >About Us</a
+            >
+
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Products</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Infrastructure</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Investor Corner</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Estimator</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Contact Us</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            class="lg:hidden text-white text-3xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden lg:hidden bg-black/30 backdrop-blur-sm text-white px-6 py-6 space-y-4"
+        >
+          <a href="/" class="block">Home</a>
+          <a
+            href="Aboutus.html"
+            class="block bg-white text-red-600 px-4 py-1.5 rounded-full font-bold shadow"
+            >About Us</a
+          >
+          <a href="#" class="block">Products</a>
+          <a href="#" class="block">Infrastructure</a>
+          <a href="#" class="block">Investor Corner</a>
+          <a href="#" class="block">Estimator</a>
+          <a href="#" class="block">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- About section -->
+      <section>
+        <div class="w-full overflow-hidden hidden md:block">
+          <!-- TOP WHITE SECTION -->
+          <div class="relative bg-white">
+            <div
+              class="max-w-7xl mx-auto px-6 md:px-16 py-14 md:py-20 relative z-10"
+            >
+              <!-- Text -->
+              <div class="max-w-xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-black mb-5">
+                  About <span class="text-red-600">Apex TMT</span>
+                </h1>
+
+                <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                  Apex TMT is a trusted name in high-quality, BIS-certified TMT
+                  bars, engineered to deliver strength, durability, and safety
+                  for modern construction needs. Built using advanced
+                  manufacturing technology, Apex TMT ensures consistent quality
+                  and superior performance in every bar.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hand Image (perfect overlap like design) -->
+            <img
+              src="Apex-Images/steel-holding.png"
+              alt="Steel rod hand"
+              class="absolute right-0 bottom-[-40px] md:bottom-[-60px] md:bottom-[-320px] h-56 md:h-100 lg:h-175 object-contain z-20 pointer-events-none"
+            />
+          </div>
+
+          <!-- BOTTOM STEEL BANNER -->
+          <div class="w-full h-[260px] md:h-[320px]">
+            <img
+              src="Apex-Images/steel-banner-2.png"
+              alt="Steel rods banner"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <!-- mobile section -->
+        <div class="md:hidden mt-5">
+          <div class="w-full bg-white overflow-hidden">
+            <!-- Top Content -->
+            <div class="p-4 text-center">
+              <h2 class="text-xl font-bold mb-1 text-black">
+                About <span class="text-red-600">Apex TMT</span>
+              </h2>
+
+              <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                Apex TMT is a trusted name in high-quality, BIS-certified TMT
+                bars, engineered to deliver strength, durability, and safety for
+                modern construction needs. Built using advanced manufacturing
+                technology, Apex TMT ensures consistent quality and superior
+                performance in every bar.
+              </p>
+            </div>
+
+            <!-- Bottom Image -->
+            <img
+              src="Apex-Images/mobile-steel-banner.png"
+              alt="Steel TMT Bar"
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- vision and mission section -->
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mt-7">
+        <!-- VISION CARD -->
+        <div class="relative bg-gray-50 p-8 pl-12 border-l-4 border-red-600">
+          <!-- ICON (PUT HERE) -->
+          <div class="mb-4 text-red-600">
+            <img src="Apex-icons/eye-Icon.png" alt="" />
+          </div>
+
+          <h3
+            class="text-xl font-bold tracking-wide text-gray-900 uppercase mb-3"
+          >
+            Our Vision
+          </h3>
+
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            To be a trusted leader in the steel industry by delivering
+            high-quality, durable, and innovative TMT solutions that strengthen
+            the future of construction.
+          </p>
+
+          <!-- red underline -->
+          <div class="w-12 h-1 bg-red-600"></div>
+        </div>
+
+        <!-- MISSION CARD -->
+        <div class="relative bg-gray-50 p-8 pl-12 border-l-4 border-red-600">
+          <!-- ICON (PUT HERE) -->
+          <div class="mb-4 text-red-600">
+            <img src="Apex-icons/circle-Icon.png" alt="" />
+          </div>
+
+          <h3
+            class="text-xl font-bold tracking-wide text-gray-900 uppercase mb-3"
+          >
+            Our Mission
+          </h3>
+
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            To manufacture BIS-certified TMT bars using advanced technology,
+            ensuring superior strength, safety, and long-lasting performance for
+            every structure we support.
+          </p>
+
+          <div class="w-12 h-1 bg-red-600"></div>
+        </div>
+      </div>
+
+      <section
+        class="w-full h-[270px] sm:h-[420px] md:h-[350px] lg:h-[450px] xl:h-[550px] bg-red-600 mt-7 flex items-center justify-center text-center"
+      >
+        <h1
+          class="text-white font-semibold text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
+        >
+          Core Values
+        </h1>
+      </section>
+
+      
+
+     <section
+  class="relative overflow-hidden py-24 
+         bg-none
+         lg:bg-[url('Apex-Images/steel-bars.jpg')]
+         lg:bg-repeat-x
+         lg:bg-center
+         ">
+
+
+  <div class="max-w-7xl mx-auto px-6">
+
+  <!-- Cards Row -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-3xl shadow-2xl p-10 text-center w-full max-w-xs transition hover:-translate-y-2">
+      <img src="Apex-icons/A-1.png" class="w-12 h-12 mx-auto mb-4" />
+      <h3 class="font-bold text-sm tracking-wide mb-2">QUALITY FIRST</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Every bar meets strict BIS standards for strength and reliability.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-3xl shadow-2xl p-10 text-center w-full max-w-xs md:mt-10 lg:mt-20 transition hover:-translate-y-2">
+      <img src="Apex-icons/A-2.png" class="w-12 h-12 mx-auto mb-4" />
+      <h3 class="font-bold text-sm tracking-wide mb-2">ADVANCED ENGINEERING</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Manufactured using modern technology for consistent performance.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-3xl shadow-2xl p-10 text-center w-full max-w-xs lg:-mt-10 transition hover:-translate-y-2">
+      <img src="Apex-icons/A-3.png" class="w-12 h-12 mx-auto mb-4" />
+      <h3 class="font-bold text-sm tracking-wide mb-2">TRUST & INTEGRITY</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Built on long-term relationships with builders and engineers.
+      </p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-white rounded-3xl shadow-2xl p-10 text-center w-full max-w-xs md:mt-10 lg:mt-24 transition hover:-translate-y-2">
+      <img src="Apex-icons/A-4.png" class="w-12 h-12 mx-auto mb-4" />
+      <h3 class="font-bold text-sm tracking-wide mb-2">DURABILITY & SAFETY</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Designed to resist corrosion and enhance structural life.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    
+
+    <!-- footer section -->
+    <footer class="w-full bg-gray-50 pt-16 pb-8 fade-up">
+      <!-- Top CTA -->
+      <div
+        class="max-w-7xl mx-auto px-6 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-red-600 mb-2 fade-left">
+            Build Strong. Build with Apex.
+          </h2>
+          <p class="text-gray-600 max-w-xl text-sm fade-down">
+            Engineered TMT bars designed for superior bonding, durability, and
+            performance. Trusted by builders for projects that demand strength
+            and reliability.
+          </p>
+        </div>
+
+        <button
+          class="flex items-center gap-2 border border-red-500 text-black font-bold px-5 py-2 rounded-md hover:bg-red-500/65 hover:text-white transition cursor-pointer fade-right"
+        >
+          Get A Free Estimate
+          <span class="text-lg"
+            ><img src="Apex-icons/Next-large.png" class="w-4" alt=""
+          /></span>
+        </button>
+      </div>
+
+      <!-- Footer Card -->
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="bg-white rounded-3xl shadow-[0_0_30px_rgba(0,0,0,0.1)] p-8 md:p-12"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- LEFT: Logo + description + socials -->
+            <div>
+              <!-- LOGO -->
+              <div class="mb-4">
+                <!--  logo -->
+                <a href="#">
+                  <img
+                    src="Apex-icons/Logo.png"
+                    class="h-10 cursor-pointer"
+                    alt="Apex Dura"
+                  />
+                </a>
+              </div>
+
+              <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
+                Apex TMT is committed to delivering high-quality, BIS-certified
+                TMT bars engineered for strength, durability, and safety.
+                Trusted for building structures that stand strong for
+                generations.
+              </p>
+
+              <!-- SOCIAL ICONS -->
+              <div class="flex gap-3 items-center">
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Facebook.svg" alt="Facebook" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Linkedin.svg" alt="LinkedIn" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Instagram.svg" alt="Instagram" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Youtube.svg" alt="YouTube" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/X.svg" alt="twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- CENTER: Quick Links -->
+            <div>
+              <h4 class="text-red-600 font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="hover:text-red-500 cursor-pointer">Products</li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Infrastructure
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Investor Corner
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">Estimator</li>
+                <li class="hover:text-red-500 cursor-pointer">Contact Us</li>
+              </ul>
+            </div>
+
+            <!-- RIGHT: Info -->
+            <div>
+              <h4 class="text-red-600 font-semibold mb-4">Info</h4>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="hover:text-red-500 cursor-pointer">
+                  Privacy Policy
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Terms of Service
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="mt-10 border-t border-red-500 pt-4 text-center">
+            <p class="text-xs lg:text-sm text-red-500">
+              Copyright ©2026 Apex – All rights reserved | Designed and
+              Developed by Ayatiworks
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Js/Home-slider.js"></script>
+    <script src="Js/Mobile-navbar.js"></script>
+    <script src="Js/Scroll-Animation.js"></script>
+    <script src="Js/Products-carouselcars.js"></script>
+    <script src="Js/logo-fading.js"></script>
+    <script src="Js/Animation.js"></script>
+  </body>
+</html>
