@@ -359,3 +359,15 @@ body{
   opacity: 1;
   transform: translate(0,0) scale(1);
 }
+
+
+
+/* Mobile carousels  */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
