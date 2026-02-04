@@ -1,39 +1,45 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const slides = document.getElementById("slides");
   const slideItems = slides ? slides.children : [];
 
-  const cards  = document.querySelectorAll(".feature-card");
-  const icons  = document.querySelectorAll(".icon");
+  const cards = document.querySelectorAll(".feature-card");
+  const icons = document.querySelectorAll(".icon");
+
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
+
   const featureWrapper = document.querySelector(".feature-wrapper");
 
   let index = 0;
-  let auto;
+  let auto = null;
 
   const total = slideItems.length || cards.length;
 
 
 
-  /* ================= MOVE CAROUSEL ================= */
+  /* =========================================
+     MOVE MAIN SLIDES (video carousel)
+  ========================================= */
   function updateCarousel() {
     if (!slides) return;
-    slides.style.transform = `translateX(-${index * 100}%)`;
+
+    slides.style.transform = `translate3d(-${index * 100}%,0,0)`; // GPU smooth
   }
 
 
 
-  /* ================= PLAY ONLY ACTIVE VIDEO ================= */
+  /* =========================================
+     PLAY ONLY ACTIVE VIDEO
+  ========================================= */
   function updateVideos(active) {
-    [...slideItems].forEach((video, i) => {
-      if (video.tagName === "VIDEO") {
+    [...slideItems].forEach((el, i) => {
+      if (el.tagName === "VIDEO") {
         if (i === active) {
-          video.play();
+          el.play().catch(() => {});
         } else {
-          video.pause();
-          video.currentTime = 0;
+          el.pause();
+          el.currentTime = 0;
         }
       }
     });
@@ -41,7 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  /* ================= ICONS ================= */
+  /* =========================================
+     ICONS
+  ========================================= */
   function updateIcons(active) {
     icons.forEach((icon, i) => {
       icon.classList.toggle("opacity-100", i === active);
@@ -53,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  /* ================= CARDS ================= */
+  /* =========================================
+     CARDS
+  ========================================= */
   function updateCards(active) {
     cards.forEach((card, i) => {
       card.classList.toggle("active", i === active);
@@ -64,51 +74,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  /* ================= MOBILE SCROLL ================= */
+  /* =========================================
+     MOBILE ONLY HORIZONTAL SCROLL
+     (FIXED — NO scrollIntoView anymore)
+  ========================================= */
   function scrollToActiveCard() {
     if (!featureWrapper) return;
 
     if (window.innerWidth <= 639) {
-      const activeCard = cards[index];
-      if (activeCard) {
-        activeCard.scrollIntoView({
-          behavior: "smooth",
-          inline: "start",
-          block: "nearest"
-        });
-      }
+      const cardWidth = cards[0].offsetWidth;
+
+      featureWrapper.scrollTo({
+        left: cardWidth * index,
+        behavior: "smooth"
+      });
     }
   }
 
 
 
-  /* ================= CENTRAL NAV ================= */
+  /* =========================================
+     GO TO SLIDE (central controller)
+  ========================================= */
   function goToSlide(i) {
     index = (i + total) % total;
 
     updateCarousel();
-    updateVideos(index);   // ⭐ added
+    updateVideos(index);
     updateIcons(index);
     updateCards(index);
-    scrollToActiveCard();
+    scrollToActiveCard(); // safe now
   }
 
 
 
-  /* ================= AUTO PLAY (5s HOLD) ================= */
+  /* =========================================
+     AUTOPLAY (stable)
+  ========================================= */
   function startAuto() {
+    stopAuto();
+
     auto = setInterval(() => {
       goToSlide(index + 1);
-    }, 5000); // ⭐ 5 seconds
+    }, 5000);
   }
 
   function stopAuto() {
-    clearInterval(auto);
+    if (auto) {
+      clearInterval(auto);
+      auto = null;
+    }
   }
 
 
 
-  /* ================= EVENTS ================= */
+  /* =========================================
+     EVENTS
+  ========================================= */
+
   cards.forEach(card => {
     card.addEventListener("click", () => {
       const slideIndex = parseInt(card.dataset.slide, 10);
@@ -116,22 +139,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(index + 1));
-  if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(index - 1));
+  nextBtn?.addEventListener("click", () => goToSlide(index + 1));
+  prevBtn?.addEventListener("click", () => goToSlide(index - 1));
 
+
+
+  /* pause on hover/touch */
   const carousel = document.getElementById("carousel");
-  if (carousel) {
-    carousel.addEventListener("mouseenter", stopAuto);
-    carousel.addEventListener("mouseleave", startAuto);
-    carousel.addEventListener("touchstart", stopAuto);
-    carousel.addEventListener("touchend", startAuto);
-  }
+
+  carousel?.addEventListener("mouseenter", stopAuto);
+  carousel?.addEventListener("mouseleave", startAuto);
+  carousel?.addEventListener("touchstart", stopAuto, { passive: true });
+  carousel?.addEventListener("touchend", startAuto, { passive: true });
 
 
 
-  /* ================= INIT ================= */
+  /* =========================================
+     INIT
+  ========================================= */
   goToSlide(0);
   startAuto();
 
 });
-

@@ -330,36 +330,113 @@ body{
 
 
 /* Animation  css */
-/* initial hidden */
+/* =========================================
+   Base hidden state (ultra smooth)
+========================================= */
+
 .fade-up,
 .fade-down,
 .fade-left,
 .fade-right,
-.fade-in {
+.fade-in,
+.animate-down,
+.animate-up {
   opacity: 0;
 
-  /* slower + luxury smooth */
+  /* MUCH smoother + premium feel */
   transition:
-    opacity 2.2s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 2.2s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
 
-  will-change: opacity, transform;
+  /* GPU stability */
+  will-change: transform, opacity;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
 }
 
 
-/* small movement = elegant */
-.fade-up    { transform: translateY(26px) scale(0.97); }
-.fade-down  { transform: translateY(-26px) scale(0.97); }
-.fade-left  { transform: translateX(-26px) scale(0.97); }
-.fade-right { transform: translateX(26px) scale(0.97); }
-.fade-in    { transform: scale(0.96); }
 
+/* =========================================
+   Directions (small = elegant)
+   Large moves cause jitter
+========================================= */
+
+.fade-up    { transform: translateY(40px); }
+.fade-down  { transform: translateY(-40px); }
+.fade-left  { transform: translateX(-40px); }
+.fade-right { transform: translateX(40px); }
+.fade-in    { transform: scale(0.94); }
+
+
+
+/* =========================================
+   Visible state
+========================================= */
 
 .show {
   opacity: 1;
-  transform: translate(0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
 }
 
+
+
+/* =========================================
+   Keyframe cinematic versions
+   (extra premium slow motion)
+========================================= */
+
+.animate-down,
+.animate-up {
+  transition: none;
+}
+
+
+/* Top → Down */
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Bottom → Up */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* slower cinematic timing */
+.show.animate-down {
+  animation: slideDownFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.show.animate-up {
+  animation: slideUpFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+
+/* =========================================
+   Optional: slight stagger helper
+   (makes page feel premium)
+========================================= */
+
+.fade-up:nth-child(1) { transition-delay: .05s }
+.fade-up:nth-child(2) { transition-delay: .12s }
+.fade-up:nth-child(3) { transition-delay: .20s }
+.fade-up:nth-child(4) { transition-delay: .28s }
 
 
 /* Mobile carousels  */
@@ -371,3 +448,17 @@ body{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+
+
+/* About foundation cards */
+.apx-foundation-track::-webkit-scrollbar {
+  display: none;
+}
+.apx-foundation-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#apxFoundationSlider::-webkit-scrollbar{display:none}
+#apxFoundationSlider{-ms-overflow-style:none;scrollbar-width:none}
