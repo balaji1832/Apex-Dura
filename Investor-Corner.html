@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investor-Corner</title>
+    <link rel="icon" href="Apex-icons/Logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  </head>
+
+  <body>
+    <header class="w-full relative">
+      <!-- bg-image -->
+      <div
+        class="relative w-full h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden fade-up"
+      >
+        <!-- Banner Image -->
+        <img
+          src="Apex-Images/investor-Banner.jpg"
+          class="w-full h-full object-cover"
+          alt="Investor Corner Banner"
+        />
+
+        <!-- Breadcrumb -->
+        <div class="absolute bottom-6 left-6 flex items-center gap-3">
+          <!-- Home -->
+          <a
+            href="/"
+            class="flex items-center gap-2 text-red-600 px-4 py-2 rounded-md text-sm font-medium transition"
+          >
+            <!-- Home Icon -->
+            <img src="Apex-icons/Home.png" alt="Home icon " class="w-4 h-4" />
+
+            Home
+          </a>
+
+          <!-- Arrow -->
+          <span class="text-white text-lg">›</span>
+
+          <!-- About -->
+          <span
+            class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md"
+          >
+            <!-- User/About Icon -->
+            <img
+              src="Apex-icons/user-circle.png"
+              alt="user icon "
+              class="w-4 h-4"
+            />
+
+            Investor-Corner
+          </span>
+        </div>
+      </div>
+
+      <!-- Header Content Overlay -->
+      <div class="absolute top-0 left-0 w-full z-20">
+        <div
+          class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 md:py-6"
+        >
+          <!-- Logo -->
+          <a href="/"
+            ><img
+              src="Apex-icons/Logo.png"
+              alt="Apex Dura Logo"
+              class="h-10 sm:h-12 md:h-13 w-auto"
+          /></a>
+
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden lg:flex items-center space-x-8 text-white text-base lg:text-lg"
+          >
+            <a href="/" class="hover:text-gray-300 transition font-semibold">
+              Home
+            </a>
+            <a
+              href="Aboutus.html"
+              class="hover:text-gray-300 transition font-semibold"
+              >About Us</a
+            >
+
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Products</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Infrastructure</a
+            >
+            <a
+              href="Investor-Corner.html"
+              class="bg-white text-red-600 px-4 py-1.5 rounded-full font-bold shadow"
+              >Investor Corner</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Estimator</a
+            >
+            <a href="#" class="hover:text-gray-300 transition font-semibold"
+              >Contact Us</a
+            >
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            class="lg:hidden text-white text-3xl focus:outline-none"
+          >
+            ☰
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden lg:hidden bg-black/30 backdrop-blur-sm text-white px-6 py-6 space-y-4"
+        >
+          <a href="/" class="block">Home</a>
+          <a href="Aboutus.html" class="block">About Us</a>
+          <a href="#" class="block">Products</a>
+          <a href="#" class="block">Infrastructure</a>
+          <a
+            href="Investor-Corner.html"
+            class="bg-white text-red-600 px-4 py-1.5 rounded-full font-bold shadow"
+            >Investor Corner</a
+          >
+          <a href="#" class="block">Estimator</a>
+          <a href="#" class="block">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Welcome section -->
+      <section class="bg-white py-14 px-6">
+        <div class="max-w-6xl mx-auto">
+          <div
+            class="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start justify-items-start"
+          >
+            <!-- LEFT CONTENT -->
+            <div>
+              <h2 class="text-[40px] font-bold text-red-600 mb-6 leading-snug">
+                Welcome to Our Investor <br />
+                Relations
+              </h2>
+
+              <p class="text-gray-600 leading-relaxed mb-10 max-w-lg">
+                M/s. Khayati Steel Industries Pvt. Ltd. upholds a steadfast
+                commitment to delivering sustainable value for all stakeholders.
+                Its remarkable track record of financial discipline attests to
+                its continuous pursuit of excellence as a world-class
+                organisation.
+              </p>
+
+              <div class="flex flex-col sm:flex-row items-start gap-4">
+                <span
+                  class="bg-red-600 text-white px-5 py-2 rounded text-sm w-fit"
+                >
+                  Transparency
+                </span>
+
+                <span
+                  class="bg-red-600 text-white px-5 py-2 rounded text-sm w-fit"
+                >
+                  Growth
+                </span>
+
+                <span
+                  class="bg-red-600 text-white px-5 py-2 rounded text-sm w-fit"
+                >
+                  Trust
+                </span>
+              </div>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div
+              class="w-full lg:w-[520px] bg-white rounded-xl shadow-2xl px-10 pt-5 pb-10"
+            >
+              <h3 class="text-4xl font-bold text-red-600 mb-8">
+                Get in touch with us
+              </h3>
+
+              <form class="space-y-7">
+                <div>
+                  <label class="block text-md font-bold mb-1"
+                    >Business Name</label
+                  >
+                  <input
+                    class="w-full border-b border-gray-300 focus:border-red-600 outline-none py-2"
+                    placeholder=" Enter your Business Name"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-md font-bold mb-1"
+                    >Business Email</label
+                  >
+                  <input
+                    class="w-full border-b border-gray-300 focus:border-red-600 outline-none py-2"
+                    placeholder=" Enter your Business Email"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-md font-bold mb-1"
+                    >Mobile Number</label
+                  >
+                  <input
+                    class="w-full border-b border-gray-300 focus:border-red-600 outline-none py-2"
+                    placeholder=" Enter your Mobile Number"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-md font-bold mb-1">Message</label>
+                  <textarea
+                    rows="3"
+                    class="w-full border-b border-gray-300 focus:border-red-600 outline-none py-2 resize-none"
+                    placeholder="Enter your message here..."
+                  ></textarea>
+                </div>
+
+                <button
+                  class="bg-red-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 hover:bg-red-700 transition"
+                >
+                  Learn More →
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-14 px-6">
+        <div class="max-w-7xl mx-auto">
+          <!-- Heading -->
+          <h2 class="text-center text-4xl font-bold text-red-500 mb-4">
+            Corporate Governance
+          </h2>
+
+          <p
+            class="text-center text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed"
+          >
+            Apex TMT is committed to strong corporate governance practices that
+            ensure transparency, accountability, and long-term shareholder
+            trust.
+          </p>
+
+          <!-- MAIN GRID -->
+          <div class="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-stretch">
+            <!-- LEFT BIG CARD -->
+            <div
+              class="relative rounded-2xl overflow-hidden group h-[320px] lg:h-[520px] w-full"
+            >
+              <img
+                src="Apex-Images/ic-1.jpg"
+                class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                alt=""
+              />
+
+              <!-- bottom gradient -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+              ></div>
+
+              <!-- text -->
+              <div class="absolute bottom-0 p-6 text-white">
+                <h3 class="font-bold text-base mb-1 text-red-600">
+                  Board Oversight
+                </h3>
+                <p class="text-sm opacity-90">
+                  Experienced leadership guiding strategic decisions.
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT 4 SMALL CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- Card 1 -->
+              <div
+                class="lg:col-span-1 col-span-1 relative rounded-2xl overflow-hidden shadow-xl group h-[220px] sm:h-[240px] lg:h-[250px]"
+              >
+                <img
+                  src="Apex-Images/ic-2.jpg"
+                  class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 p-5">
+                  <h3 class="font-bold text-base text-red-600">
+                    Regulatory Compliance
+                  </h3>
+                  <p class="text-[12px] text-white">
+                    Adherence to statutory <br />
+                    and regulatory <br />
+                    requirements.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 (wide only on desktop) -->
+              <div
+                class="lg:col-span-2 col-span-1 relative rounded-2xl overflow-hidden shadow-xl group h-[220px] sm:h-[240px] lg:h-[250px]"
+              >
+                <img
+                  src="Apex-Images/ic-3.jpg"
+                  class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 p-5">
+                  <h3 class="font-bold text-base text-red-600">
+                    Ethical Practices
+                  </h3>
+                  <p class="text-[12px] text-white">
+                    Commitment to integrity and responsible <br />
+                    business conduct.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 (wide only on desktop) -->
+              <div
+                class="lg:col-span-2 col-span-1 relative rounded-2xl overflow-hidden shadow-xl group h-[220px] sm:h-[240px] lg:h-[250px]"
+              >
+                <img
+                  src="Apex-Images/ic-4.jpg"
+                  class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 p-5 text-white">
+                  <h3 class="font-bold text-base text-red-600">
+                    Risk Management
+                  </h3>
+                  <p class="text-[12px] text-white">
+                    Structured processes to identify and <br />
+                    manage business risks.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="lg:col-span-1 col-span-1 relative rounded-2xl overflow-hidden shadow-xl group h-[220px] sm:h-[240px] lg:h-[250px]"
+              >
+                <img
+                  src="Apex-Images/ic-5.jpg"
+                  class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 p-5 text-white">
+                  <h3 class="font-bold text-base text-red-600">
+                    Transparency & Disclosure
+                  </h3>
+                  <p class="text-[12px] text-white">
+                    Clear and timely communication of financial and operational
+                    information to stakeholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="finance-overview bg-white py-24 px-6">
+        <!-- Heading -->
+        <div class="max-w-7xl mx-auto text-center mb-14">
+          <h2 class="text-4xl font-bold text-red-600 mb-3">
+            Financial Performance Overview
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            A snapshot of Apex TMT’s financial performance, reflecting
+            consistent growth, stability, and long-term value creation.
+          </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+          <!-- Slider on mobile+tablet / grid on desktop -->
+          <div
+            class="finance-slider flex lg:grid lg:grid-cols-3 gap-10 overflow-x-auto lg:overflow-visible scroll-smooth"
+          >
+            <!-- CARD -->
+            <div
+              class="finance-card relative min-w-[90%] sm:min-w-[48%] lg:min-w-0"
+            >
+              <img
+                src="Apex-Images/ic-1.jpg"
+                class="w-full h-[260px] object-cover rounded-lg"
+              />
+              <div
+                class="absolute left-6 right-6 -bottom-10 bg-white shadow-xl p-6 rounded-md"
+              >
+                <h3 class="text-red-600 font-bold text-lg mb-2">
+                  Revenue Growth
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Demonstrating steady year-on-year business expansion.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="finance-card relative min-w-[90%] sm:min-w-[48%] lg:min-w-0"
+            >
+              <img
+                src="Apex-Images/ic-2.jpg"
+                class="w-full h-[260px] object-cover rounded-lg"
+              />
+              <div
+                class="absolute left-6 right-6 -bottom-10 bg-white shadow-xl p-6 rounded-md"
+              >
+                <h3 class="text-red-600 font-bold text-lg mb-2">
+                  Operational Performance
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Efficient manufacturing and optimized cost structures.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="finance-card relative min-w-[90%] sm:min-w-[48%] lg:min-w-0"
+            >
+              <img
+                src="Apex-Images/ic-3.jpg"
+                class="w-full h-[260px] object-cover rounded-lg"
+              />
+              <div
+                class="absolute left-6 right-6 -bottom-10 bg-white shadow-xl p-6 rounded-md"
+              >
+                <h3 class="text-red-600 font-bold text-lg mb-2">
+                  Profitability Metrics
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Focused on sustainable margins and financial discipline.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="w-full bg-gray-50 pt-16 pb-8 fade-up">
+      <!-- Top CTA -->
+      <div
+        class="max-w-7xl mx-auto px-6 mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+      >
+        <div>
+          <h2 class="text-3xl font-bold text-red-600 mb-2 fade-left">
+            Build Strong. Build with Apex.
+          </h2>
+          <p class="text-gray-600 max-w-xl text-sm fade-down">
+            Engineered TMT bars designed for superior bonding, durability, and
+            performance. Trusted by builders for projects that demand strength
+            and reliability.
+          </p>
+        </div>
+
+        <button
+          class="flex items-center gap-2 border border-red-500 text-black font-bold px-5 py-2 rounded-md hover:bg-red-500/65 hover:text-white transition cursor-pointer fade-right"
+        >
+          Get A Free Estimate
+          <span class="text-lg"
+            ><img src="Apex-icons/Next-large.png" class="w-4" alt=""
+          /></span>
+        </button>
+      </div>
+
+      <!-- Footer Card -->
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="bg-white rounded-3xl shadow-[0_0_30px_rgba(0,0,0,0.1)] p-8 md:p-12"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- LEFT: Logo + description + socials -->
+            <div>
+              <!-- LOGO -->
+              <div class="mb-4">
+                <!--  logo -->
+                <a href="#">
+                  <img
+                    src="Apex-icons/Logo.png"
+                    class="h-10 cursor-pointer"
+                    alt="Apex Dura"
+                  />
+                </a>
+              </div>
+
+              <p class="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
+                Apex TMT is committed to delivering high-quality, BIS-certified
+                TMT bars engineered for strength, durability, and safety.
+                Trusted for building structures that stand strong for
+                generations.
+              </p>
+
+              <!-- SOCIAL ICONS -->
+              <div class="flex gap-3 items-center">
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Facebook.svg" alt="Facebook" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Linkedin.svg" alt="LinkedIn" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Instagram.svg" alt="Instagram" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/Youtube.svg" alt="YouTube" />
+                </a>
+
+                <a
+                  href="#"
+                  class="transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:drop-shadow-md"
+                >
+                  <img src="Apex-icons/X.svg" alt="twitter" />
+                </a>
+              </div>
+            </div>
+
+            <!-- CENTER: Quick Links -->
+            <div>
+              <h4 class="text-red-600 font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="hover:text-red-500 cursor-pointer">Products</li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Infrastructure
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Investor Corner
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">Estimator</li>
+                <li class="hover:text-red-500 cursor-pointer">Contact Us</li>
+              </ul>
+            </div>
+
+            <!-- RIGHT: Info -->
+            <div>
+              <h4 class="text-red-600 font-semibold mb-4">Info</h4>
+              <ul class="space-y-3 text-gray-700 text-sm">
+                <li class="hover:text-red-500 cursor-pointer">
+                  Privacy Policy
+                </li>
+                <li class="hover:text-red-500 cursor-pointer">
+                  Terms of Service
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="mt-10 border-t border-red-500 pt-4 text-center">
+            <p class="text-xs lg:text-sm text-red-500">
+              Copyright ©2026 Apex – All rights reserved | Designed and
+              Developed by Ayatiworks
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Js/Home-slider.js"></script>
+    <script src="Js/Mobile-navbar.js"></script>
+    <script src="Js/Scroll-Animation.js"></script>
+    <script src="Js/Products-carouselcars.js"></script>
+    <script src="Js/logo-fading.js"></script>
+    <script src="Js/Animation.js"></script>
+
+    <script>
+      function initFinanceSlider() {
+        const slider = document.querySelector(".finance-slider");
+
+        if (!slider) return;
+
+        const isDesktop = window.innerWidth >= 1024;
+
+        if (isDesktop) return; // disable slider on desktop
+
+        let index = 0;
+
+        setInterval(() => {
+          const cards = document.querySelectorAll(".finance-card");
+          const cardWidth = cards[0].offsetWidth + 40;
+
+          index = (index + 1) % cards.length;
+
+          slider.scrollTo({
+            left: cardWidth * index,
+            behavior: "smooth",
+          });
+        }, 2500);
+      }
+
+      window.addEventListener("load", initFinanceSlider);
+    </script>
+  </body>
+</html>
