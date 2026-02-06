@@ -38,7 +38,7 @@
 
         <!-- center text -->
         <div
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center fade-up"
         >
           <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold">
             Our Infrastructure <br />
@@ -157,27 +157,37 @@
     </header>
 
     <main>
-        <!-- M/s. Khayati Steel Industries Pvt. Ltd. section -->
+      <!-- M/s. Khayati Steel Industries Pvt. Ltd. section -->
       <section
         class="relative w-full min-h-[520px] lg:h-[600px] bg-no-repeat bg-cover bg-center"
         style="
-          background-image: url(&quot;Apex-Images/Infrastucture-banner-image-2.jpg&quot;);
+          background-image: url(&quot;Apex-Images/Infrastructure-banner-3.jpg&quot;);
         "
       >
+        <!-- Red diagonal overlay -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden">
+          <div
+            class="absolute top-0 right-0 w-full h-[200%] bg-red-500/60 wave-overlay"
+            style="clip-path: polygon(35% 0, 100% 0, 100% 100%, 90% 100%)"
+          ></div>
+        </div>
+
         <div
           class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 py-14 lg:py-0 h-full flex items-center"
         >
           <!-- Text column -->
           <div class="max-w-[520px] text-gray-800">
             <!-- Title -->
-            <h2 class="text-[20px] sm:text-[22px] font-semibold text-gray-900">
+            <h2
+              class="text-[20px] sm:text-[22px] font-semibold text-gray-900 fade-left"
+            >
               M/s.
               <span class="font-bold">Khayati Steel Industries Pvt. Ltd.</span>
             </h2>
 
             <!-- Description -->
             <p
-              class="mt-4 sm:mt-5 text-[14px] sm:text-[15px] leading-6 sm:leading-7 text-gray-600"
+              class="mt-4 sm:mt-5 text-[14px] sm:text-[15px] leading-6 sm:leading-7 text-gray-800 fade-right"
             >
               upholds a steadfast commitment to delivering sustainable value for
               all stakeholders. Its remarkable track record of financial
@@ -190,7 +200,10 @@
               <!-- Row 1 -->
               <div class="flex items-center gap-4 sm:gap-6">
                 <!-- icon -->
-                <img src="Apex-icons/i-calender.png" class="w-6 h-6" />
+                <img
+                  src="Apex-icons/i-calender.png"
+                  class="w-6 h-6 fade-left"
+                />
 
                 <!-- gradient line -->
                 <div
@@ -200,12 +213,12 @@
                 <!-- text -->
                 <div>
                   <p
-                    class="text-[10px] sm:text-[11px] md:text-[13px] tracking-[0.6em] sm:tracking-[0.45em] md:tracking-[0.65em] text-red-500 uppercase"
+                    class="text-[10px] sm:text-[11px] md:text-[13px] tracking-[0.6em] sm:tracking-[0.45em] md:tracking-[0.65em] text-red-500 uppercase fade-right"
                   >
                     Established
                   </p>
                   <p
-                    class="mt-2 text-[26px] sm:text-[32px] md:text-[25px] font-bold text-gray-900 leading-none"
+                    class="mt-2 text-[26px] sm:text-[32px] md:text-[25px] font-bold text-gray-900 leading-none fade-down"
                   >
                     15.04.2008
                   </p>
@@ -218,12 +231,12 @@
               >
                 <div class="sm:text-right order-2 sm:order-1">
                   <p
-                    class="text-[10px] sm:text-[11px] md:text-[13px] tracking-[0.6em] sm:tracking-[0.45em] md:tracking-[0.65em] text-red-500 uppercase"
+                    class="text-[10px] sm:text-[11px] md:text-[13px] tracking-[0.6em] sm:tracking-[0.45em] md:tracking-[0.65em] text-red-500 uppercase fade-left"
                   >
                     Headquarters
                   </p>
                   <p
-                    class="mt-2 text-[24px] sm:text-[30px] md:text-[25px] font-bold text-gray-900 leading-none"
+                    class="mt-2 text-[24px] sm:text-[30px] md:text-[25px] font-bold text-gray-900 leading-none fade-down"
                   >
                     Mysore, Karnataka
                   </p>
@@ -235,14 +248,20 @@
                   <div
                     class="hidden sm:block h-[2px] w-32 bg-gradient-to-r from-white to-red-500"
                   ></div>
-                  <img src="Apex-icons/i-building.png" class="w-6 h-6" />
+                  <img
+                    src="Apex-icons/i-building.png"
+                    class="w-6 h-6 fade-right"
+                  />
                 </div>
               </div>
 
               <!-- Row 3 -->
               <div class="flex items-center gap-4 sm:gap-6">
                 <!-- icon -->
-                <img src="Apex-icons/i-location.png" class="w-6 h-6" />
+                <img
+                  src="Apex-icons/i-location.png"
+                  class="w-6 h-6 fade-left"
+                />
 
                 <!-- gradient line -->
                 <div
@@ -252,12 +271,12 @@
                 <!-- text -->
                 <div>
                   <p
-                    class="text-[10px] sm:text-[11px] md:text-[13px] tracking-[0.6em] sm:tracking-[0.45em] md:tracking-[0.65em] text-red-500 uppercase"
+                    class="text-[10px] sm:text-[11px] md:text-[13px] tracking-[0.6em] sm:tracking-[0.45em] md:tracking-[0.65em] text-red-500 uppercase fade-right"
                   >
                     Strategic Location
                   </p>
                   <p
-                    class="mt-2 text-[24px] sm:text-[30px] md:text-[25px] font-bold text-gray-900 leading-none"
+                    class="mt-2 text-[24px] sm:text-[30px] md:text-[25px] font-bold text-gray-900 leading-none fade-down"
                   >
                     ~140 km
                     <span
@@ -272,7 +291,7 @@
           </div>
         </div>
       </section>
-           <!-- Steel Re-Rolling Plant section -->
+      <!-- Steel Re-Rolling Plant section -->
       <section class="mt-7 py-12 sm:py-14 lg:py-16 relative overflow-hidden">
         <div
           class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-8 sm:gap-12"
@@ -281,12 +300,12 @@
           <div class="relative">
             <!-- top left corner -->
             <div
-              class="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-8 h-8 sm:w-10 sm:h-10 border-l-4 border-t-4 border-red-600"
+              class="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-8 h-8 sm:w-10 sm:h-10 border-l-4 border-t-4 border-red-600 animate-down"
             ></div>
 
             <!-- number -->
             <h2
-              class="text-[64px] sm:text-[80px] lg:text-[100px] font-extrabold text-red-600 leading-none"
+              class="text-[64px] sm:text-[80px] lg:text-[100px] font-extrabold text-red-600 leading-none fade-right"
             >
               14"
             </h2>
@@ -296,14 +315,14 @@
           <div class="relative max-w-3xl text-center sm:text-left">
             <!-- title -->
             <h3
-              class="text-[26px] sm:text-[34px] lg:text-[56px] font-bold text-black tracking-wide leading-tight"
+              class="text-[26px] sm:text-[34px] lg:text-[56px] font-bold text-black tracking-wide leading-tight fade-right"
             >
               Steel Re-Rolling Plant
             </h3>
 
             <!-- production line -->
             <div
-              class="mt-4 flex flex-col sm:flex-row sm:items-end gap-2 sm:gap-4"
+              class="mt-4 flex flex-col sm:flex-row sm:items-end gap-2 sm:gap-4 fade-down"
             >
               <p
                 class="text-[11px] sm:text-[12px] tracking-[0.18em] text-gray-600 uppercase"
@@ -325,18 +344,18 @@
 
             <!-- bottom right corner -->
             <div
-              class="absolute -bottom-6 right-0 md:-right-5 w-8 h-8 sm:w-10 sm:h-10 border-r-4 border-b-4 border-red-600"
+              class="absolute -bottom-6 right-0 md:-right-5 w-8 h-8 sm:w-10 sm:h-10 border-r-4 border-b-4 border-red-600 animate-down"
             ></div>
           </div>
         </div>
       </section>
-         <!-- Technology/QUALITY section -->
+      <!-- Technology/QUALITY section -->
       <section class="w-full min-h-[520px] lg:h-[600px] py-1">
         <div
           class="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_2fr] gap-16 items-end"
         >
           <!-- LEFT: BUILDING -->
-          <div class="flex justify-center lg:justify-start h-full">
+          <div class="flex justify-center lg:justify-start h-full animate-up">
             <img
               src="Apex-Images/i-building.png"
               alt="Building"
@@ -346,198 +365,206 @@
 
           <!-- RIGHT: CONTENT -->
           <div class="space-y-20">
-            <!-- TECHNOLOGY -->
-            <div class="relative max-w-xl pb-0 md:pb-20">
-              <div
-                class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-10"
-              >
-                <h3
-                  class="text-red-600 tracking-[6px] text-sm font-semibold whitespace-nowrap"
-                >
-                  Technology
-                </h3>
 
-                <p class="text-gray-700 text-[13px] leading-relaxed max-w-md">
-                  Our Mysore Plant is completely automated and integrated for
-                  manufacturing high quality TMT rebars and Billets using the
-                  best technology in the industry. Apex TMT bars are produced
-                  using patented quenching technology from Thermex – Germany.
-                </p>
-              </div>
+  <!-- TECHNOLOGY -->
+  <div
+    class="group relative max-w-xl pb-6 md:pb-20
+           transition-all duration-500
+           hover:-translate-y-2 rounded-lg p-6"
+  >
+    <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-10">
+      <h3
+        class="text-red-600 tracking-[6px] md:mt-5 text-sm font-semibold whitespace-nowrap"
+      >
+        Technology
+      </h3>
 
-              <!-- Connector -->
-              <svg
-                class="absolute left-2 sm:left-6 top-10 w-72 sm:w-80 h-24 hidden md:block"
-                viewBox="0 0 360 120"
-                fill="none"
-              >
-                <defs>
-                  <linearGradient id="techGradient" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#dc2626" />
-                    <stop offset="100%" stop-color="#ffffff" />
-                  </linearGradient>
-                </defs>
+      <p class="text-gray-700 text-[13px] leading-relaxed max-w-md">
+        Our Mysore Plant is completely automated and integrated for
+        manufacturing high quality TMT rebars and Billets using the
+        best technology in the industry. Apex TMT bars are produced
+        using patented quenching technology from Thermex – Germany.
+      </p>
+    </div>
 
-                <circle cx="30" cy="30" r="8" fill="#dc2626" />
-                <path
-                  d="M30 30 L100 80 L360 80"
-                  stroke="url(#techGradient)"
-                  stroke-width="2"
-                  fill="none"
-                />
-              </svg>
-            </div>
+    <!-- Connector -->
+    <svg
+      class="absolute left-2 sm:left-6 top-18 w-72 sm:w-80 h-24 hidden md:block"
+      viewBox="0 0 360 120"
+      fill="none"
+    >
+      <defs>
+        <linearGradient id="techGradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#dc2626" />
+          <stop offset="100%" stop-color="#ffffff" />
+        </linearGradient>
+      </defs>
 
-            <!-- QUALITY -->
-            <div
-              class="relative max-w-xl ml-auto text-left md:text-left pb-0 md:pb-20"
+      <!-- Dot -->
+      <circle cx="30" cy="30" r="8" fill="#dc2626" />
+
+      <!-- Animated line -->
+      <path
+        d="M30 30 L100 80 L360 80"
+        stroke="url(#techGradient)"
+        stroke-width="2"
+        fill="none"
+        class="line-draw"
+      />
+    </svg>
+  </div>
+
+  <!-- QUALITY -->
+  <div
+    class="group relative max-w-xl ml-auto pb-6 md:pb-20
+           transition-all duration-500
+           hover:-translate-y-2  rounded-lg p-6"
+  >
+    <div
+      class="flex flex-col sm:flex-row sm:items-start sm:justify-end gap-6 sm:gap-10"
+    >
+      <p
+        class="text-gray-700 text-[13px] leading-relaxed max-w-md order-2 sm:order-1"
+      >
+        Our finished products are tested as per BIS and Thermex
+        specifications at our well equipped chemical and physical
+        laboratories.
+      </p>
+
+      <h3
+        class="text-red-600 tracking-[6px] text-sm font-semibold whitespace-nowrap order-1 sm:order-2"
+      >
+        QUALITY
+      </h3>
+    </div>
+
+    <!-- Connector -->
+    <svg
+      class="absolute right-2 sm:right-6 top-10 w-72 sm:w-80 h-24 hidden md:block"
+      viewBox="0 0 360 120"
+      fill="none"
+    >
+      <defs>
+        <linearGradient id="qualityGradient" x1="1" y1="0" x2="0" y2="0">
+          <stop offset="0%" stop-color="#dc2626" />
+          <stop offset="100%" stop-color="#ffffff" />
+        </linearGradient>
+      </defs>
+
+      <!-- Dot -->
+      <circle cx="330" cy="30" r="8" fill="#dc2626" />
+
+      <!-- Animated line -->
+      <path
+        d="M330 30 L260 80 L0 80"
+        stroke="url(#qualityGradient)"
+        stroke-width="2"
+        fill="none"
+        class="line-draw"
+      />
+    </svg>
+  </div>
+
+</div>
+
+        </div>
+      </section>
+      <!-- Advanced Quality Control section -->
+      <section class="py-10 sm:py-14 overflow-hidden">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-4 gap-8 lg:gap-12 items-start"
+        >
+          <!-- LEFT TEXT -->
+          <div class="space-y-4 py-5 text-left lg:text-left">
+            <h2
+              class="text-red-600 text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight hidden lg:block fade-left"
             >
-              <div
-                class="flex flex-col sm:flex-row sm:items-start sm:justify-end gap-6 sm:gap-10"
-              >
-                <p
-                  class="text-gray-700 text-[13px] leading-relaxed max-w-md order-2 sm:order-1"
-                >
-                  Our finished products are tested as per BIS and Thermex
-                  specifications at our well equipped chemical and physical
-                  laboratories.
-                </p>
+              Advanced <br />
+              Quality Control <br />
+              & Precision <br />
+              Systems
+            </h2>
+            <h2
+              class="text-red-600 text-xl sm:text-3xl lg:text-4xl font-bold leading-tight lg:hidden fade-left"
+            >
+              Advanced Quality Control <br />
+              & Precision Systems
+            </h2>
 
-                <h3
-                  class="text-red-600 tracking-[6px] text-sm font-semibold whitespace-nowrap order-1 sm:order-2"
-                >
-                  QUALITY
+            <p
+              class="text-gray-600 text-sm text-start leading-relaxed max-w-sm lg:mx-0 fade-right"
+            >
+              Automated multi-snap shear system with variable-speed DC drive
+              ensures stress-free rolling of TMT bars, improving strength
+              uniformity and maintaining dimensional accuracy throughout the
+              process.
+            </p>
+          </div>
+
+          <!-- RIGHT CARDS -->
+          <div class="lg:col-span-3">
+            <!-- Slider container -->
+            <div
+              id="qcSlider"
+              class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 lg:grid lg:grid-cols-3 lg:overflow-visible lg:snap-none fade-in"
+            >
+              <!-- CARD 1 -->
+              <div
+                class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3"
+              >
+                <img
+                  src="Apex-Images/ic-1.jpg"
+                  class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
+                  alt="Zero Tension Rolling"
+                />
+                <h3 class="text-red-600 text-base font-semibold fade-up">
+                  Zero Tension Rolling
                 </h3>
+                <p class="text-gray-600 text-sm leading-relaxed fade-down">
+                  Automated multi-snap shear system with variable-speed DC drive
+                  ensures stress-free rolling of TMT bars.
+                </p>
               </div>
 
-              <!-- Connector -->
-              <svg
-                class="absolute right-2 sm:right-6 top-10 w-72 sm:w-80 h-24 hidden md:block"
-                viewBox="0 0 360 120"
-                fill="none"
+              <!-- CARD 2 -->
+              <div
+                class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3"
               >
-                <defs>
-                  <linearGradient
-                    id="qualityGradient"
-                    x1="1"
-                    y1="0"
-                    x2="0"
-                    y2="0"
-                  >
-                    <stop offset="0%" stop-color="#dc2626" />
-                    <stop offset="100%" stop-color="#ffffff" />
-                  </linearGradient>
-                </defs>
-
-                <circle cx="330" cy="30" r="8" fill="#dc2626" />
-                <path
-                  d="M330 30 L260 80 L0 80"
-                  stroke="url(#qualityGradient)"
-                  stroke-width="2"
-                  fill="none"
+                <img
+                  src="Apex-Images/ic-2.jpg"
+                  class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
+                  alt="Spectrometer"
                 />
-              </svg>
+                <h3 class="text-red-600 text-base font-semibold fade-up">
+                  Spectrometer
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed fade-down">
+                  Advanced spectrometer analyzes the chemical composition of TMT
+                  bars by testing up to 32 elements.
+                </p>
+              </div>
+
+              <!-- CARD 3 -->
+              <div
+                class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3"
+              >
+                <img
+                  src="Apex-Images/ic-3.jpg"
+                  class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
+                  alt="C&S Determination Unit"
+                />
+                <h3 class="text-red-600 text-base font-semibold fade-up">
+                  C&S Determination Unit
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed fade-down">
+                  Carbon & Sulphur determination system enables precise chemical
+                  analysis through automated testing.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-         <!-- Advanced Quality Control section -->
-      <section class="py-10 sm:py-14 overflow-hidden">
-  <div
-    class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-4 gap-8 lg:gap-12 items-start"
-  >
-    <!-- LEFT TEXT -->
-    <div class="space-y-4 py-5 text-left lg:text-left">
-      <h2
-        class="text-red-600 text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight hidden lg:block"
-      >
-        Advanced <br />
-        Quality Control <br />
-        & Precision <br />
-        Systems
-      </h2>
-      <h2
-        class="text-red-600 text-xl sm:text-3xl lg:text-4xl font-bold leading-tight lg:hidden"
-      >
-        Advanced Quality Control <br />
-        & Precision Systems
-      </h2>
-
-      <p
-        class="text-gray-600 text-sm  text-start leading-relaxed max-w-sm  lg:mx-0"
-      >
-        Automated multi-snap shear system with variable-speed DC drive
-        ensures stress-free rolling of TMT bars, improving strength
-        uniformity and maintaining dimensional accuracy throughout the
-        process.
-      </p>
-    </div>
-
-    <!-- RIGHT CARDS -->
-    <div class="lg:col-span-3">
-      <!-- Slider container -->
-      <div
-        id="qcSlider"
-        class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 lg:grid lg:grid-cols-3 lg:overflow-visible lg:snap-none"
-      >
-        <!-- CARD 1 -->
-        <div
-          class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3"
-        >
-          <img
-            src="Apex-Images/ic-1.jpg"
-            class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
-            alt="Zero Tension Rolling"
-          />
-          <h3 class="text-red-600 text-base font-semibold">
-            Zero Tension Rolling
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Automated multi-snap shear system with variable-speed DC drive
-            ensures stress-free rolling of TMT bars.
-          </p>
-        </div>
-
-        <!-- CARD 2 -->
-        <div
-          class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3"
-        >
-          <img
-            src="Apex-Images/ic-2.jpg"
-            class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
-            alt="Spectrometer"
-          />
-          <h3 class="text-red-600 text-base font-semibold">
-            Spectrometer
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Advanced spectrometer analyzes the chemical composition of TMT
-            bars by testing up to 32 elements.
-          </p>
-        </div>
-
-        <!-- CARD 3 -->
-        <div
-          class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3"
-        >
-          <img
-            src="Apex-Images/ic-3.jpg"
-            class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
-            alt="C&S Determination Unit"
-          />
-          <h3 class="text-red-600 text-base font-semibold">
-            C&S Determination Unit
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Carbon & Sulphur determination system enables precise chemical
-            analysis through automated testing.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
     </main>
 
     <!-- footer section -->
@@ -681,46 +708,46 @@
 
     <!-- Advanced Quality Control section Auto slider script -->
     <script>
-  const slider = document.getElementById("qcSlider");
-  let autoSlide;
+      const slider = document.getElementById("qcSlider");
+      let autoSlide;
 
-  function getCardsPerView() {
-    const width = window.innerWidth;
-    if (width >= 1024) return 0; // desktop: grid, no auto slide
-    if (width >= 640) return 2; // tablet
-    return 1; // mobile
-  }
-
-  function startAutoSlide() {
-    clearInterval(autoSlide);
-
-    const cardsPerView = getCardsPerView();
-    if (cardsPerView === 0) return;
-
-    const card = slider.querySelector(".qc-card");
-    if (!card) return;
-
-    const gap = 16;
-
-    autoSlide = setInterval(() => {
-      const scrollAmount = card.offsetWidth + gap;
-
-      if (
-        slider.scrollLeft + slider.clientWidth >=
-        slider.scrollWidth - 5
-      ) {
-        slider.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        slider.scrollBy({
-          left: scrollAmount * cardsPerView,
-          behavior: "smooth",
-        });
+      function getCardsPerView() {
+        const width = window.innerWidth;
+        if (width >= 1024) return 0; // desktop: grid, no auto slide
+        if (width >= 640) return 2; // tablet
+        return 1; // mobile
       }
-    }, 3500);
-  }
 
-  window.addEventListener("load", startAutoSlide);
-  window.addEventListener("resize", startAutoSlide);
-</script>
+      function startAutoSlide() {
+        clearInterval(autoSlide);
+
+        const cardsPerView = getCardsPerView();
+        if (cardsPerView === 0) return;
+
+        const card = slider.querySelector(".qc-card");
+        if (!card) return;
+
+        const gap = 16;
+
+        autoSlide = setInterval(() => {
+          const scrollAmount = card.offsetWidth + gap;
+
+          if (
+            slider.scrollLeft + slider.clientWidth >=
+            slider.scrollWidth - 5
+          ) {
+            slider.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            slider.scrollBy({
+              left: scrollAmount * cardsPerView,
+              behavior: "smooth",
+            });
+          }
+        }, 3500);
+      }
+
+      window.addEventListener("load", startAutoSlide);
+      window.addEventListener("resize", startAutoSlide);
+    </script>
   </body>
 </html>

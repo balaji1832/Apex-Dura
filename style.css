@@ -566,3 +566,34 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+
+
+  @keyframes waveSlide {
+  0% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-25%);
+  }
+}
+
+.wave-overlay {
+  animation: waveSlide 6s ease-in-out infinite;
+}
+
+
+/* Technology /QUALITY - infrastructure section */
+
+.line-draw {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.group:hover .line-draw {
+  stroke-dashoffset: 0;
+}
