@@ -557,14 +557,12 @@ body{
 
 
 
+/* Advanced Quality Control section Auto slider css */
 
-
-
-
-.qc-slider::-webkit-scrollbar {
-  display: none;
-}
-.qc-slider {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+ #qcSlider::-webkit-scrollbar {
+    display: none;
+  }
+  #qcSlider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
