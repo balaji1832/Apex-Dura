@@ -561,3 +561,10 @@ body{
 
 
 
+.qc-slider::-webkit-scrollbar {
+  display: none;
+}
+.qc-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

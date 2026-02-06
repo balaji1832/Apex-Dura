@@ -350,6 +350,209 @@
   </div>
 
 </section>
+<section class="bg-[#e6e6e6] py-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 relative">
+
+    <!-- BUILDING IMAGE -->
+    <div class="absolute left-0 bottom-0 w-[320px] lg:w-[420px]">
+      <img src="Apex-Images/i-building.png" alt="Building" class="w-full" />
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="ml-[0] lg:ml-[420px] space-y-24">
+
+      <!-- TECHNOLOGY BLOCK -->
+      <div class="relative max-w-xl">
+        <h3 class="text-red-600 tracking-[6px] text-sm font-semibold mb-6">
+          Technology
+        </h3>
+
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Our Mysore Plant is completely automated and integrated for
+          manufacturing high quality TMT rebars and Billets using the best
+          technology in the industry. Apex TMT bars are produced using
+          patented quenching technology from Thermex – Germany.
+        </p>
+
+        <!-- Connector -->
+        <svg
+          class="absolute -left-40 top-6 w-48 h-24"
+          viewBox="0 0 200 100"
+          fill="none"
+        >
+          <path
+            d="M180 10 L120 60 L20 60"
+            stroke="#dc2626"
+            stroke-width="2"
+            fill="none"
+          />
+          <circle cx="180" cy="10" r="7" fill="#dc2626" />
+        </svg>
+      </div>
+
+      <!-- QUALITY BLOCK -->
+      <div class="relative max-w-xl ml-auto text-right">
+        <h3 class="text-red-600 tracking-[6px] text-sm font-semibold mb-6">
+          QUALITY
+        </h3>
+
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Our finished products are tested as per BIS and Thermex
+          specifications at our well equipped chemical and physical
+          laboratories.
+        </p>
+
+        <!-- Connector -->
+        <svg
+          class="absolute -right-40 top-6 w-48 h-24"
+          viewBox="0 0 200 100"
+          fill="none"
+        >
+          <path
+            d="M20 10 L80 60 L180 60"
+            stroke="#dc2626"
+            stroke-width="2"
+            fill="none"
+          />
+          <circle cx="20" cy="10" r="7" fill="#dc2626" />
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="bg-[#e6e6e6] py-10 sm:py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-4 gap-8 lg:gap-12 items-start">
+
+    <!-- LEFT TEXT -->
+    <div class="space-y-4 text-center lg:text-left">
+      <h2 class="text-red-600 text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight">
+        Advanced <br />
+        Quality Control <br />
+        & Precision <br />
+        Systems
+      </h2>
+
+      <p class="text-gray-600 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
+        Automated multi-snap shear system with variable-speed DC drive
+        ensures stress-free rolling of TMT bars, improving strength
+        uniformity and maintaining dimensional accuracy throughout the
+        process.
+      </p>
+    </div>
+
+    <!-- RIGHT CARDS -->
+    <div class="lg:col-span-3">
+
+      <!-- Slider container -->
+      <div
+        id="qcSlider"
+        class="qc-slider flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4
+               lg:grid lg:grid-cols-3 lg:overflow-visible lg:snap-none"
+      >
+
+        <!-- CARD 1 -->
+        <div class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3 px-2">
+          <img
+            src="Apex-Images/ic-1.jpg"
+            class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
+            alt="Zero Tension Rolling"
+          />
+          <h3 class="text-red-600 text-base font-semibold">
+            Zero Tension Rolling
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Automated multi-snap shear system with variable-speed DC drive
+            ensures stress-free rolling of TMT bars.
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3 px-2">
+          <img
+            src="Apex-Images/steel2.jpg"
+            class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
+            alt="Spectrometer"
+          />
+          <h3 class="text-red-600 text-base font-semibold">
+            Spectrometer
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Advanced spectrometer analyzes the chemical composition of
+            TMT bars by testing up to 32 elements.
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="qc-card min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-start space-y-3 px-2">
+          <img
+            src="Apex-Images/steel3.jpg"
+            class="w-full h-40 sm:h-48 object-cover rounded-lg shadow-md"
+            alt="C&S Determination Unit"
+          />
+          <h3 class="text-red-600 text-base font-semibold">
+            C&S Determination Unit
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Carbon & Sulphur determination system enables precise
+            chemical analysis through automated testing.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hide scrollbar -->
+<style>
+.qc-slider::-webkit-scrollbar {
+  display: none;
+}
+.qc-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
+
+<!-- Auto slider script -->
+<script>
+  const slider = document.getElementById("qcSlider");
+  let autoSlide;
+
+  function getCardsPerView() {
+    const width = window.innerWidth;
+    if (width >= 1024) return 0;
+    if (width >= 640) return 2;
+    return 1;
+  }
+
+  function startAutoSlide() {
+    clearInterval(autoSlide);
+
+    const cardsPerView = getCardsPerView();
+    if (cardsPerView === 0) return;
+
+    autoSlide = setInterval(() => {
+      const card = slider.querySelector(".qc-card");
+      const gap = 16;
+      const scrollAmount = card.offsetWidth + gap;
+
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        slider.scrollBy({
+          left: scrollAmount * cardsPerView,
+          behavior: "smooth",
+        });
+      }
+    }, 3500);
+  }
+
+  window.addEventListener("load", startAutoSlide);
+  window.addEventListener("resize", startAutoSlide);
+</script>
+
 
 </body>
 </html>
