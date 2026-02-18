@@ -5,11 +5,15 @@
     { "src": "^/$", "dest": "/index.html" },
 
     { "src": "^/aboutus$", "dest": "/aboutus.html" },
-    { "src": "^/products$", "dest": "/products.html" },
-    { "src": "^/contact-us$", "dest": "/contact-us.html" },
-    { "src": "^/infrastructure$", "dest": "/infrastructure.html" },
+    { "src": "^/aboutus\\.html$", "dest": "/aboutus.html" },
+
     { "src": "^/investor-corner$", "dest": "/investor-corner.html" },
-    { "src": "^/demo$", "dest": "/demo.html" },
-    { "src": "^/estimator$", "dest": "/estimator.html" }
+    { "src": "^/investor-corner\\.html$", "dest": "/investor-corner.html" },
+
+    { "src": "^/products$", "dest": "/products.html" },
+    { "src": "^/products\\.html$", "dest": "/products.html" },
+
+    { "src": "^/contact-us$", "dest": "/contact-us.html" },
+    { "src": "^/contact-us\\.html$", "dest": "/contact-us.html" }
   ]
 }
