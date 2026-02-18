@@ -1,6 +1,7 @@
 {
   "routes": [
     { "handle": "filesystem" },
+
     { "src": "^/aboutus$", "dest": "/aboutus.html" },
     { "src": "^/products$", "dest": "/products.html" },
     { "src": "^/contact-us$", "dest": "/contact-us.html" },
@@ -8,6 +9,7 @@
     { "src": "^/investor-corner$", "dest": "/investor-corner.html" },
     { "src": "^/demo$", "dest": "/demo.html" },
     { "src": "^/estimator$", "dest": "/estimator.html" },
+
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
